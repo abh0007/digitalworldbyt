@@ -14,7 +14,7 @@ function Home() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-3xl font-poppins font-extrabold leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-2xl font-poppins font-extrabold leading-tight">
   Transform your business with{" "}
   <span className="text-white">Digital Innovation</span> and success
 </h1>
