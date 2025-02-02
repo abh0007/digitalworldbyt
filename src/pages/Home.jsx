@@ -14,7 +14,7 @@ function Home() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <h1 className="text-4xl sm:text-5xl md:text-4xl lg:text-5xl font-poppins font-extrabold leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-4xl lg:text-4xl font-poppins font-extrabold leading-tight">
             Transform your business with{" "}
             <span className="text-white">Digital Innovation</span> and success
           </h1>
@@ -87,9 +87,9 @@ function Home() {
       {/* Our Services Section */}
       <section className="py-20 bg-black">
   <div className="max-w-6xl mx-auto text-center">
-    <h2 className="text-3xl sm:text-4xl font-bold text-white">Our Trusted Brands</h2>
+    <h2 className="text-3xl sm:text-4xl font-bold text-white p-10">Our Trusted Brands</h2>
     <div className="flex space-x-150 overflow-hidden">
-      <div className="flex space-x-10 animate-loop-scroll px-2">
+      <div className="flex space-x-10 animate-loop-scroll">
         <img src="logo1.png" alt="Brand 1" className="h-16" />
         <img src="logo2.png" alt="Brand 2" className="h-16" />
         <img src="logo3.png" alt="Brand 3" className="h-16" />
@@ -107,7 +107,7 @@ function Home() {
         <img src="logo9.png" alt="Brand 9" className="h-16" />
         <img src="logo10.png" alt="Brand 10" className="h-16" />
       </div>
-      <div className="flex space-x-10 animate-loop-scroll" aria-hidden="true px-2">
+      <div className="flex space-x-10 animate-loop-scroll" aria-hidden="true">
         <img src="logo1.png" alt="Brand 1" className="h-16" />
         <img src="logo2.png" alt="Brand 2" className="h-16" />
         <img src="logo3.png" alt="Brand 3" className="h-16" />
