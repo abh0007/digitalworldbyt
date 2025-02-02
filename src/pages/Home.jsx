@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import '../styles/Home.css';
 
 function Home() {
   return (
@@ -13,7 +14,7 @@ function Home() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <h1 className="text-4xl sm:text-5xl font-poppins font-extrabold leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-4xl lg:text-5xl font-poppins font-extrabold leading-tight">
             Transform your business with{" "}
             <span className="text-white">Digital Innovation</span> and success
           </h1>
@@ -53,84 +54,81 @@ function Home() {
           <source src="/bg2.mp4" type="video/mp4" />
         </video>
       </div>
-       {/* About Us Section */}
-       <section className="py-20 bg-gray-50">
+
+      {/* How We Can Help You Section */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">About Us</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">How We Can Help You?</h2>
           <p className="mt-4 text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto">
             We are a passionate digital marketing agency dedicated to driving results for businesses of all sizes. 
             Our mission is to deliver innovative solutions that elevate brands and connect them with their target audiences.
           </p>
         </div>
+
+        {/* Services Grid */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {[
+            { icon: '🎧', title: 'One click support', description: 'Effortlessly connect with our support team to resolve your concerns in no time. Our one-click solution ensures swift assistance to keep you moving forward without delays.' },
+            { icon: '📈', title: 'Sky rocket sales', description: 'Boost your business growth with tailored strategies designed to maximize revenue and drive customer engagement. Take your sales to the next level with impactful solutions.' },
+            { icon: '📋', title: 'Quick Onboarding', description: 'Experience a seamless and efficient onboarding process. We simplify every step to get you up and running in no time, saving effort and maximizing productivity.' },
+            { icon: '📦', title: 'Product development', description: 'Transform your ideas into reality with our comprehensive product development solutions. From concept to execution, we deliver innovation that drives success.' },
+            { icon: '📁', title: 'Quality content', description: 'Stand out with content that resonates. Our high-quality, tailored messaging ensures your brand captures attention and delivers value to your audience.' },
+            { icon: '📊', title: 'Result with impact', description: 'Achieve measurable outcomes that matter. Our results-oriented approach delivers impactful solutions, ensuring your goals are not just met but exceeded.' },
+          ].map((service, index) => (
+            <div key={index} className="bg-white p-6 shadow-lg rounded-lg text-center">
+              <div className="text-5xl mb-4">{service.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-800">{service.title}</h3>
+              <p className="text-gray-600 mt-2">{service.description}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Our Services Section */}
       <section className="py-20 bg-black">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white">Our Core Services</h2>
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
-              <h3 className="text-2xl font-semibold text-black">SEO Optimization</h3>
-              <p className="mt-4 text-lg text-gray-700">
-                Boost your website's visibility and organic traffic with our expert SEO services.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
-              <h3 className="text-2xl font-semibold text-black">Social Media Marketing</h3>
-              <p className="mt-4 text-lg text-gray-700">
-                Connect with your audience through targeted social media campaigns that drive engagement.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
-              <h3 className="text-2xl font-semibold text-black">Content Strategy</h3>
-              <p className="mt-4 text-lg text-gray-700">
-                Craft a compelling content strategy to build your brand and drive customer loyalty.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="max-w-6xl mx-auto text-center">
+    <h2 className="text-3xl sm:text-4xl font-bold text-white">Our Trusted Brands</h2>
+    <div className="flex space-x-150 overflow-hidden">
+      <div className="flex space-x-10 animate-loop-scroll px-2">
+        <img src="logo1.png" alt="Brand 1" className="h-16" />
+        <img src="logo2.png" alt="Brand 2" className="h-16" />
+        <img src="logo3.png" alt="Brand 3" className="h-16" />
+        <img src="logo4.png" alt="Brand 4" className="h-16" />
+        <img src="logo5.png" alt="Brand 5" className="h-16" />
+        <img src="logo6.png" alt="Brand 6" className="h-16" />
+        <img src="logo7.png" alt="Brand 7" className="h-16" />
+        <img src="logo8.png" alt="Brand 8" className="h-16" />
+        <img src="logo9.png" alt="Brand 9" className="h-16" />
+        <img src="logo10.png" alt="Brand 10" className="h-16" />
+        <img src="logo5.png" alt="Brand 5" className="h-16" />
+        <img src="logo6.png" alt="Brand 6" className="h-16" />
+        <img src="logo7.png" alt="Brand 7" className="h-16" />
+        <img src="logo8.png" alt="Brand 8" className="h-16" />
+        <img src="logo9.png" alt="Brand 9" className="h-16" />
+        <img src="logo10.png" alt="Brand 10" className="h-16" />
+      </div>
+      <div className="flex space-x-10 animate-loop-scroll" aria-hidden="true px-2">
+        <img src="logo1.png" alt="Brand 1" className="h-16" />
+        <img src="logo2.png" alt="Brand 2" className="h-16" />
+        <img src="logo3.png" alt="Brand 3" className="h-16" />
+        <img src="logo4.png" alt="Brand 4" className="h-16" />
+        <img src="logo5.png" alt="Brand 5" className="h-16" />
+        <img src="logo6.png" alt="Brand 6" className="h-16" />
+        <img src="logo7.png" alt="Brand 7" className="h-16" />
+        <img src="logo8.png" alt="Brand 8" className="h-16" />
+        <img src="logo9.png" alt="Brand 9" className="h-16" />
+        <img src="logo10.png" alt="Brand 10" className="h-16" />
+        <img src="logo5.png" alt="Brand 5" className="h-16" />
+        <img src="logo6.png" alt="Brand 6" className="h-16" />
+        <img src="logo7.png" alt="Brand 7" className="h-16" />
+        <img src="logo8.png" alt="Brand 8" className="h-16" />
+        <img src="logo9.png" alt="Brand 9" className="h-16" />
+        <img src="logo10.png" alt="Brand 10" className="h-16" />
+      </div>
+    </div>
+  </div>
+</section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">What Our Clients Say</h2>
-          <div className="mt-10 flex flex-col sm:flex-row space-x-0 sm:space-x-4 justify-center gap-4">
-            <div className="bg-gray-50 p-6 rounded-lg shadow-lg max-w-xs hover:shadow-2xl transform hover:scale-105 transition duration-300">
-              <p className="text-lg text-gray-700 italic">"The team helped us grow our business online exponentially!"</p>
-              <p className="mt-4 font-semibold text-black">John Doe, CEO of XYZ Corp</p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg shadow-lg max-w-xs hover:shadow-2xl transform hover:scale-105 transition duration-300">
-              <p className="text-lg text-gray-700 italic">"A fantastic experience. Our ROI has improved by 30%!"</p>
-              <p className="mt-4 font-semibold text-black">Jane Smith, Marketing Head at ABC Ltd</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio Section */}
-      <section className="py-20 bg-black">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white">Our Work</h2>
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
-              <img src="/project1.jpg" alt="Project 1" className="w-full h-48 object-cover rounded-lg" />
-              <h3 className="mt-4 text-xl font-semibold text-gray-800">Project One</h3>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
-              <img src="/project2.jpg" alt="Project 2" className="w-full h-48 object-cover rounded-lg" />
-              <h3 className="mt-4 text-xl font-semibold text-gray-800">Project Two</h3>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300">
-              <img src="/project3.jpg" alt="Project 3" className="w-full h-48 object-cover rounded-lg" />
-              <h3 className="mt-4 text-xl font-semibold text-gray-800">Project Three</h3>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer Section */}
-     
     </div>
   );
 }

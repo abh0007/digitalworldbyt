@@ -1,0 +1,14 @@
+/* Home.css */
+.animate-loop-scroll {
+    animation: loop-scroll 15s linear infinite;
+  }
+  
+  @keyframes loop-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-155%);
+    }
+  }
+
