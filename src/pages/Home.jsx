@@ -14,17 +14,19 @@ function Home() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <h1 className="sm:text-3xl md:text-4xl lg:text-4xl font-poppins font-extrabold leading-tight">
-            Transform your business with{" "}
-            <span className="text-white">Digital Innovation</span> and success
-          </h1>
-          <hr className="my-4 border-t-2 border-white opacity-50 w-3/4 sm:w-full mx-auto lg:mx-0" />
+          <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-3xl font-poppins font-extrabold leading-tight">
+  Transform your business with{" "}
+  <span className="text-white">Digital Innovation</span> and success
+</h1>
 
-          <p className="mt-4 text-lg sm:text-xl font-light">
-            We help businesses establish a strong online presence through
-            cutting-edge marketing strategies. Our innovative approach ensures
-            sustainable growth and maximum digital impact.
-          </p>
+<hr className="my-4 border-t-2 border-white opacity-50 w-3/4 sm:w-full mx-auto lg:mx-0" />
+
+<p className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl font-light">
+  We help businesses establish a strong online presence through
+  cutting-edge marketing strategies. Our innovative approach ensures
+  sustainable growth and maximum digital impact.
+</p>
+
 
           {/* Button and Link */}
           <div className="mt-6 flex flex-col sm:flex-row gap-4 sm:gap-6">
