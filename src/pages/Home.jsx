@@ -21,7 +21,7 @@ function Home() {
 
 <hr className="my-4 border-t-2 border-white opacity-50 w-3/4 sm:w-full mx-auto lg:mx-0" />
 
-<p className="mt-4 text-base sm:text-lg md:text-xl lg:text-xl font-light">
+<p className="mt-4 text-base sm:text-lg md:text-xl lg:text-l font-light">
   We help businesses establish a strong online presence through
   cutting-edge marketing strategies. Our innovative approach ensures
   sustainable growth and maximum digital impact.
@@ -32,7 +32,7 @@ function Home() {
           <div className="mt-6 flex flex-col sm:flex-row gap-4 sm:gap-6">
             <Link
               to="/contact"
-              className="px-6 py-3 bg-white border-2 border-white text-black rounded-lg shadow-lg hover:bg-black hover:text-white transition duration-300"
+              className="px-4 py-2 bg-white border-2 border-white text-black rounded-lg shadow-lg hover:bg-black hover:text-white transition duration-300"
             >
               Contact Us
             </Link>
