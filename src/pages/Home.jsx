@@ -21,7 +21,7 @@ function Home() {
 
 <hr className="my-4 border-t-2 border-white opacity-50 w-3/4 sm:w-full mx-auto lg:mx-0" />
 
-<p className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl font-light">
+<p className="mt-4 text-base sm:text-lg md:text-xl lg:text-xl font-light">
   We help businesses establish a strong online presence through
   cutting-edge marketing strategies. Our innovative approach ensures
   sustainable growth and maximum digital impact.
