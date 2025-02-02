@@ -9,7 +9,7 @@ function Home() {
       <div className="relative w-full h-screen flex flex-col-reverse sm:flex-row items-center justify-start text-left px-4 sm:px-6 md:px-10">
         {/* Content Section */}
         <motion.div
-          className="relative z-10 max-w-2xl text bg-black bg-opacity-80 text-white p-6 rounded-lg sm:bg-transparent mx-0 lg:mx-30"
+          className="relative z-10 max-w-2xl text bg-black bg-opacity-80 text-white p-6 rounded-lg sm:bg-transparent mx-0 lg:mx-20"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
