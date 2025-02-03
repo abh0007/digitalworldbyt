@@ -47,7 +47,7 @@ const ContactUs = () => {
         (error) => {
           console.error("FAILED...", error);
           setStatus("Failed to send message. Please try again.");
-        
+        }
       );
   };
 
