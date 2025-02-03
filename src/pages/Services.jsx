@@ -107,7 +107,7 @@ function Services() {
   // Initialize AOS
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration
+      duration: 500, // Animation duration
       once: true, // Whether animation should happen only once
     });
   }, []);
@@ -221,7 +221,7 @@ function Services() {
           </p>
           <div className="mt-10 space-y-8">
             {services.map((service, index) => (
-              <div key={index} id={service.link} data-aos="fade-up" data-aos-delay={index * 100}>
+              <div key={index} id={service.link} data-aos="fade-up" data-aos-delay={index * 20}>
                 <h4 className="text-2xl font-bold">{service.title}</h4>
                 <p className="mt-2 text-gray-400">{service.details.join(", ")}</p>
                 <h5 className="mt-4 font-semibold text-lg">How We Implement It:</h5>
