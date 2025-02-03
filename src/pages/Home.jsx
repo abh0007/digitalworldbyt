@@ -86,49 +86,34 @@ function Home() {
         </div>
       </section>
 
-      {/* Our Services Section */}
+      
       <section className="py-20 bg-black">
-  <div className="max-w-6xl mx-auto text-center">
-    <h2 className="text-3xl sm:text-4xl font-bold text-white p-10">Our Trusted Brands</h2>
-    <div className="flex space-x-150 overflow-hidden">
-      <div className="flex space-x-10 animate-loop-scroll">
-        <img src="logo1.png" alt="Brand 1" className="h-16" />
-        <img src="logo2.png" alt="Brand 2" className="h-16" />
-        <img src="logo3.png" alt="Brand 3" className="h-16" />
-        <img src="logo4.png" alt="Brand 4" className="h-16" />
-        <img src="logo5.png" alt="Brand 5" className="h-16" />
-        <img src="logo6.png" alt="Brand 6" className="h-16" />
-        <img src="logo7.png" alt="Brand 7" className="h-16" />
-        <img src="logo8.png" alt="Brand 8" className="h-16" />
-        <img src="logo9.png" alt="Brand 9" className="h-16" />
-        <img src="logo10.png" alt="Brand 10" className="h-16" />
-        <img src="logo5.png" alt="Brand 5" className="h-16" />
-        <img src="logo6.png" alt="Brand 6" className="h-16" />
-        <img src="logo7.png" alt="Brand 7" className="h-16" />
-        <img src="logo8.png" alt="Brand 8" className="h-16" />
-        <img src="logo9.png" alt="Brand 9" className="h-16" />
-        <img src="logo10.png" alt="Brand 10" className="h-16" />
-      </div>
-      <div className="flex space-x-10 animate-loop-scroll" aria-hidden="true">
-        <img src="logo1.png" alt="Brand 1" className="h-16" />
-        <img src="logo2.png" alt="Brand 2" className="h-16" />
-        <img src="logo3.png" alt="Brand 3" className="h-16" />
-        <img src="logo4.png" alt="Brand 4" className="h-16" />
-        <img src="logo5.png" alt="Brand 5" className="h-16" />
-        <img src="logo6.png" alt="Brand 6" className="h-16" />
-        <img src="logo7.png" alt="Brand 7" className="h-16" />
-        <img src="logo8.png" alt="Brand 8" className="h-16" />
-        <img src="logo9.png" alt="Brand 9" className="h-16" />
-        <img src="logo10.png" alt="Brand 10" className="h-16" />
-        <img src="logo5.png" alt="Brand 5" className="h-16" />
-        <img src="logo6.png" alt="Brand 6" className="h-16" />
-        <img src="logo7.png" alt="Brand 7" className="h-16" />
-        <img src="logo8.png" alt="Brand 8" className="h-16" />
-        <img src="logo9.png" alt="Brand 9" className="h-16" />
-        <img src="logo10.png" alt="Brand 10" className="h-16" />
-      </div>
+      <div className="max-w-6xl mx-auto  text-container">
+  <h2>Our Trusted Brands</h2>
+  <div className="brand-slider">
+    <div className="animate-loop-scroll">
+      <img src="logo6.jpg" alt="Brand 1" className="h-16" />
+      <img src="logo7.jpg" alt="Brand 2" className="h-16" />
+      <img src="logo8.jpg" alt="Brand 3" className="h-16" />
+      <img src="logo9.jpg" alt="Brand 4" className="h-16" />
+      <img src="logo10.jpg" alt="Brand 5" className="h-16" />
+      <img src="logo11.jpg" alt="Brand 6" className="h-16" />
+      <img src="logo12.jpg" alt="Brand 7" className="h-16" />
+      <img src="logo13.jpg" alt="Brand 8" className="h-16" />
+    </div>
+    <div className="animate-loop-scroll" aria-hidden="true">
+      <img src="logo6.jpg" alt="Brand 1" className="h-16" />
+      <img src="logo7.jpg" alt="Brand 2" className="h-16" />
+      <img src="logo8.jpg" alt="Brand 3" className="h-16" />
+      <img src="logo9.jpg" alt="Brand 4" className="h-16" />
+      <img src="logo10.jpg" alt="Brand 5" className="h-16" />
+      <img src="logo11.jpg" alt="Brand 6" className="h-16" />
+      <img src="logo12.jpg" alt="Brand 7" className="h-16" />
+      <img src="logo13.jpg" alt="Brand 8" className="h-16" />
     </div>
   </div>
+</div>
+
 </section>
 
     </div>
