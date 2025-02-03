@@ -16,7 +16,7 @@ function Home() {
         >
           <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-3xl font-poppins font-extrabold leading-tight">
   Transform your business with{" "}
-  <span className="text-white">Digital Innovation</span> and success
+  <span className="text-purple-300">Digital Innovation</span> and success
 </h1>
 
 <hr className="my-4 border-t-2 border-white opacity-50 w-3/4 sm:w-full mx-auto lg:mx-0" />
@@ -60,10 +60,25 @@ function Home() {
       {/* How We Can Help You Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">How We Can Help You?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800"> <motion.h2
+          className="text-3xl sm:text-4xl font-bold text-gray-800"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          How We Can Help You?
+        </motion.h2>
+</h2>
           <p className="mt-4 text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto">
-            We are a passionate digital marketing agency dedicated to driving results for businesses of all sizes. 
-            Our mission is to deliver innovative solutions that elevate brands and connect them with their target audiences.
+          <motion.p
+          className="mt-4 text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          We are a passionate digital marketing agency dedicated to driving results for businesses of all sizes.
+          Our mission is to deliver innovative solutions that elevate brands and connect them with their target audiences.
+        </motion.p>
           </p>
         </div>
 
@@ -77,11 +92,24 @@ function Home() {
             { icon: '📁', title: 'Quality content', description: 'Stand out with content that resonates. Our high-quality, tailored messaging ensures your brand captures attention and delivers value to your audience.' },
             { icon: '📊', title: 'Result with impact', description: 'Achieve measurable outcomes that matter. Our results-oriented approach delivers impactful solutions, ensuring your goals are not just met but exceeded.' },
           ].map((service, index) => (
-            <div key={index} className="bg-white p-6 shadow-lg rounded-lg text-center">
-              <div className="text-5xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-800">{service.title}</h3>
-              <p className="text-gray-600 mt-2">{service.description}</p>
-            </div>
+            
+            <motion.div
+            key={index}
+            className="bg-white p-6 rounded-lg text-center shadow-lg hover:shadow-2xl transition-all duration-300"
+            whileHover={{ scale: 1.05 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+          >
+            <motion.div 
+              className="text-5xl mb-4"
+              whileHover={{ rotate: 10 }}
+            >
+              {service.icon}
+            </motion.div>
+            <h3 className="text-xl font-semibold text-gray-800">{service.title}</h3>
+            <p className="text-gray-600 mt-2">{service.description}</p>
+          </motion.div>
           ))}
         </div>
       </section>
@@ -93,7 +121,7 @@ function Home() {
   <div className="brand-slider">
     <div className="animate-loop-scroll">
       <img src="logo6.jpg" alt="Brand 1" className="h-16" />
-      <img src="logo7.jpg" alt="Brand 2" className="h-16" />
+      <img src="logo7.png" alt="Brand 2" className="h-16" />
       <img src="logo8.jpg" alt="Brand 3" className="h-16" />
       <img src="logo9.jpg" alt="Brand 4" className="h-16" />
       <img src="logo10.jpg" alt="Brand 5" className="h-16" />
@@ -103,7 +131,7 @@ function Home() {
     </div>
     <div className="animate-loop-scroll" aria-hidden="true">
       <img src="logo6.jpg" alt="Brand 1" className="h-16" />
-      <img src="logo7.jpg" alt="Brand 2" className="h-16" />
+      <img src="logo7.png" alt="Brand 2" className="h-16" />
       <img src="logo8.jpg" alt="Brand 3" className="h-16" />
       <img src="logo9.jpg" alt="Brand 4" className="h-16" />
       <img src="logo10.jpg" alt="Brand 5" className="h-16" />
