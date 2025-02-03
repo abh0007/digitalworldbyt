@@ -121,7 +121,7 @@ function Home() {
   <div className="brand-slider">
     <div className="animate-loop-scroll">
       <img src="logo6.jpg" alt="Brand 1" className="h-16" />
-      <img src="logo7.png" alt="Brand 2" className="h-16" />
+      <img src="logo7.jpg" alt="Brand 2" className="h-16" />
       <img src="logo8.jpg" alt="Brand 3" className="h-16" />
       <img src="logo9.jpg" alt="Brand 4" className="h-16" />
       <img src="logo10.jpg" alt="Brand 5" className="h-16" />
@@ -131,7 +131,7 @@ function Home() {
     </div>
     <div className="animate-loop-scroll" aria-hidden="true">
       <img src="logo6.jpg" alt="Brand 1" className="h-16" />
-      <img src="logo7.png" alt="Brand 2" className="h-16" />
+      <img src="logo7.jpg" alt="Brand 2" className="h-16" />
       <img src="logo8.jpg" alt="Brand 3" className="h-16" />
       <img src="logo9.jpg" alt="Brand 4" className="h-16" />
       <img src="logo10.jpg" alt="Brand 5" className="h-16" />
