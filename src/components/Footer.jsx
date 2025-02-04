@@ -52,7 +52,7 @@ const ContactUs = () => {
   };
 
   return (
-    <footer className="bg-white text-black py-10">
+    <footer className="bg-white text-black py-10 font-sans font-serif">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
         
         {/* Logo & About */}
@@ -124,18 +124,28 @@ const ContactUs = () => {
             Email: contact@digitalworldbyt.com
           </p>
           <div className="flex space-x-4 mt-4">
-            <a href="#" className="text-blue-500 hover:text-blue-500"><FaFacebook size={24} /></a>
-            <a href="#" className="text-blue-500 hover:text-blue-300"><FaTwitter size={24} /></a>
-            <a href="#" className="text-blue-500 hover:text-pink-500"><FaInstagram size={24} /></a>
-            <a href="#" className="text-blue-500 hover:text-blue-600"><FaLinkedin size={24} /></a>
+            <a href="#" className="text-gray-500 hover:text-blue-500"><FaFacebook size={24} /></a>
+            <a href="#" className="text-gray-500 hover:text-blue-300"><FaTwitter size={24} /></a>
+            <a href="#" className="text-gray-500 hover:text-pink-500"><FaInstagram size={24} /></a>
+            <a href="#" className="text-gray-500 hover:text-blue-600"><FaLinkedin size={24} /></a>
           </div>
         </div>
       </div>
 
-      {/* Copyright Section */}
       <div className="text-center text-gray-500 text-sm mt-6 border-t border-gray-700 pt-4">
-        © 2025 DigitalWorldByT. All rights reserved.
-      </div>
+    © 2025 DigitalWorldByT. All rights reserved.
+  </div>
+  <div className="text-center text-gray-500 text-sm mt-4">
+    Developed by{" "}
+    <a 
+      href="https://www.linkedin.com/in/abhinay-gangwar-2b13b9239/" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="text-blue-500 hover:text-gray-300 hover:underline transition-colors"
+    >
+      Abhinay Gangwar
+    </a>
+  </div>
     </footer>
   );
 };

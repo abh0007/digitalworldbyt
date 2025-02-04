@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./ScrollToTop"
 
+
 function App() {
   return (
     <div className="bg-black text-white">

@@ -4,7 +4,7 @@ import '../styles/Home.css';
 
 function Home() {
   return (
-    <div>
+    <div className="font-sans font-serif">
       {/* Hero Section */}
       <div className="relative w-full h-screen flex flex-col-reverse sm:flex-row items-center justify-start text-left px-4 sm:px-6 md:px-10">
         {/* Content Section */}
@@ -116,7 +116,7 @@ function Home() {
 
       
       <section className="py-20 bg-black">
-      <div className="max-w-6xl mx-auto  text-container">
+      <div className="max-w-10xl mx-auto  text-container">
   <h2>Our Trusted Brands</h2>
   <div className="brand-slider">
     <div className="animate-loop-scroll">

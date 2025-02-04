@@ -11,7 +11,7 @@ function Navbar() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white text-black text-lg p-2 shadow-md z-20">
+    <nav className="fixed top-0 left-0 w-full bg-white text-black text-lg p-2 shadow-md z-20 font-sans md:font-serif sm:font-serif">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center">

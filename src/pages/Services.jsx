@@ -102,6 +102,20 @@ const services = [
   },
 
 ];
+const handleDetailClick = (id) => (e) => {
+  e.preventDefault();
+  const element = document.getElementById(id);
+  if (element) {
+    // Scroll to element with center alignment
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+    
+    // Update URL hash without scrolling again
+    window.history.replaceState(null, null, `#${id}`);
+  }
+};
 
 function Services() {
   // Initialize AOS
@@ -113,7 +127,7 @@ function Services() {
   }, []);
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full font-sans font-serif">
       {/* Hero Section */}
       <div
         className="rrelative w-full h-[70vh] p-10 bg-cover bg-center"
@@ -121,12 +135,12 @@ function Services() {
         data-aos="fade-down"
       >
         <div className="absolute top-0 left-0 w-full h-full bg-opacity-50"></div>
-        <div className="relative z-10 flex items-center justify-center text-white h-full">
+        <div className="relative z-10 flex items-center justify-center text-center text-white h-full">
           <div>
-            <h2 className="text-4xl font-extrabold" data-aos="fade-up">
+            <h3 className="text-5xl font-extrabold" data-aos="fade-up">
               Our Digital Marketing Services
-            </h2>
-            <p className="mt-4 text-lg" data-aos="fade-up" data-aos-delay="200">
+            </h3>
+            <p className="mt-4 text-xl" data-aos="fade-up" data-aos-delay="200">
               Empowering your brand with cutting-edge solutions that drive results.
             </p>
           </div>
@@ -155,7 +169,7 @@ function Services() {
                   data-aos="fade-left"
                   data-aos-delay={index * 100}
                 >
-                  <span className="text-red-500 text-xl">✔</span>
+                  <span className="text-purple-500 font-bold text-xl">✔</span>
                   <span>{point}</span>
                 </li>
               ))}
@@ -198,6 +212,7 @@ function Services() {
             <div className="mt-4">
               <a
                 href={`#${service.link}`}
+                onClick={handleDetailClick(service.link)}
                 className="text-blue-400 font-semibold hover:text-blue-600"
               >
                 SERVICE DETAILS →
@@ -219,7 +234,7 @@ function Services() {
           <p className="text-lg text-center mt-2" data-aos="fade-up" data-aos-delay="100">
             Discover how our services can help scale your business.
           </p>
-          <div className="mt-10 space-y-8">
+          <div className="mt-20 space-y-8">
             {services.map((service, index) => (
               <div key={index} id={service.link} data-aos="fade-up" data-aos-delay={index * 20}>
                 <h4 className="text-2xl font-bold">{service.title}</h4>
