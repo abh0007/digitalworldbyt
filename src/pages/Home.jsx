@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import '../styles/Home.css';
 import Footer from "../components/Footer"; // Ensure correct import path
+import { FaGlobe, FaClock, FaProjectDiagram, FaSmile, FaIndustry } from "react-icons/fa";
 
 
 function Home() {
@@ -43,7 +44,14 @@ function Home() {
     "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7291777433630883840?compact=1",
     "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7290718816936828928?compact=1",
   ];
-  
+  const stats = [
+    { icon: <FaGlobe className="text-gray-400 text-5xl" />, value: "20+", label: "Countries Served" },
+    { icon: <FaClock className="text-gray-400 text-5xl" />, value: "5+", label: "Years of Experience" },
+    { icon: <FaProjectDiagram className="text-gray-400 text-5xl" />, value: "100+", label: "Successful Projects" },
+    { icon: <FaSmile className="text-gray-400 text-5xl" />, value: "50+", label: "Happy Clients" },
+    { icon: <FaIndustry className="text-gray-400 text-5xl" />, value: "10+", label: "Industries Covered" },
+  ];
+
   return (
     <div className="font-sans font-serif relative w-full h-screen">
       {/* Background Image */}
@@ -99,16 +107,10 @@ function Home() {
     <section  style={{ backgroundColor: "#ddd8d3" }} className="py-10 px-4 sm:px-6 md:px-10">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6">
         {/* Left Side - Image */}
-        <div className="w-full md:w-1/2 flex justify-center">
-          <img
-            src="/tanya.jpg" // Replace with actual image path
-            alt="Tanya Narula"
-            className="w-full md:w-[80%] rounded-lg shadow-lg object-cover"
-          />
-        </div>
+        
 
         {/* Right Side - Text Content */}
-        <div className="w-full md:w-1/2 text-center md:text-left">
+        <div className="w-full md:w-1/2 text-center md:text-center">
           <h3 className="text-lg text-gray-600 font-semibold">Hear It From</h3>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
             Miss. Tanya Narula
@@ -120,11 +122,74 @@ function Home() {
             "Digital World is not just an agency, it's a revolution in marketing."
           </p>
         </div>
+        <div className="w-full md:w-1/2 flex justify-center">
+          <img
+            src="/tanya.jpg" // Replace with actual image path
+            alt="Tanya Narula"
+            className="w-full md:w-[80%] rounded-lg shadow-lg object-cover"
+          />
+        </div>
       </div>
     </section>
 
-      {/* How We Can Help You Section */}
-      <section className="py-20 bg-gray-50">
+     
+      <section className="py-12 bg-white">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-8 text-black">What We Offer</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6 text-black">
+          {services.map((service, index) => (
+            <Link
+              key={index}
+              to={service.link}
+              className="group block bg-transparent  overflow-hidden transition-transform transform hover:scale-105"
+            >
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-56 object-cover"
+              />
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-semibold group-hover:text-blue-400">
+                  {service.title}
+                </h3>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+    <section className="bg-black text-white py-16">
+      <div className="max-w-6xl mx-auto text-center px-6">
+        <h2 className="text-4xl font-bold mb-6 text-white">Our Experience</h2>
+        <p className="text-lg mb-12">
+          Empowering businesses with our expertise across multiple industries and countries.
+        </p>
+
+        {/* Desktop Grid View */}
+        <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          {stats.map((stat, index) => (
+            <div key={index} className="flex flex-col items-center">
+              {stat.icon}
+              <span className="text-4xl font-bold text-white mt-4">{stat.value}</span>
+              <span className="text-lg">{stat.label}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile Scrollable View */}
+        <div className="md:hidden overflow-x-auto flex space-x-8 w-full px-4 scrollbar-hide">
+          {stats.map((stat, index) => (
+            <div key={index} className="flex flex-col items-center min-w-[200px]">
+              {stat.icon}
+              <span className="text-4xl font-bold text-white mt-4">{stat.value}</span>
+              <span className="text-lg">{stat.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+     {/* How We Can Help You Section */}
+     <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto text-center">
           <motion.h2
             className="text-3xl sm:text-4xl font-bold text-gray-800"
@@ -177,36 +242,11 @@ function Home() {
           ))}
         </div>
       </section>
-      <section className="py-12 bg-white">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-8 text-black">What We Offer</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6 text-black">
-          {services.map((service, index) => (
-            <Link
-              key={index}
-              to={service.link}
-              className="group block bg-transparent  overflow-hidden transition-transform transform hover:scale-105"
-            >
-              <img
-                src={service.image}
-                alt={service.title}
-                className="w-full h-56 object-cover"
-              />
-              <div className="p-4 text-center">
-                <h3 className="text-lg font-semibold group-hover:text-blue-400">
-                  {service.title}
-                </h3>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
 
       {/* Trusted Brands Section */}
       <section className="py-20 bg-black">
         <div className="max-w-8xl mx-auto text-container text-center">
-          <h2 className="text-white text-3xl sm:text-4xl font-bold mb-6">Our Trusted Brands</h2>
+          <h2 className="text-white text-3xl sm:text-4xl font-bold mb-6">Brands Trusted Us</h2>
           <div className="brand-slider flex overflow-hidden">
             <div className="animate-loop-scroll flex gap-8">
               {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg", "logo13.jpg"].map((logo, index) => (
