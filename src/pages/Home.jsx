@@ -48,54 +48,54 @@ function Home() {
     <div className="font-sans font-serif relative w-full h-screen">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center z-0"
-        style={{ backgroundImage: "url('/homebg.jpg')" }}
-      ></div>
+  className="absolute inset-0 bg-cover bg-center z-0"
+  style={{ backgroundImage: "url('/homebg.jpg')" }}
+></div>
 
-      {/* Hero Section */}
-      <div className="relative w-full h-full flex items-center justify-center text-center px-4 sm:px-6 md:px-10">
-      {/* Content Section */}
-      <motion.div
-        className="relative z-10 max-w-2xl bg-transparent bg-opacity-80 text-white p-6 rounded-lg"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-      >
-        {/* Animated Quote Section */}
-        <div className="h-24 flex items-center justify-center">
-          <AnimatePresence mode="wait">
-            <motion.h1
-              key={index}
-              className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 1 }}
-            >
-              {quotes[index]}
-            </motion.h1>
-          </AnimatePresence>
-        </div>
-
-        
-        {/* Button and Link */}
-        <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            to="/contact"
-            className="px-6 py-3 bg-white border-2 border-white text-black rounded-lg shadow-lg hover:bg-black hover:text-white transition duration-300"
-          >
-            Contact Us
-          </Link>
-
-          <Link
-            to="/services"
-            className="px-6 py-3 border-2 border-white text-white rounded-lg shadow-lg hover:bg-white hover:text-black transition duration-300"
-          >
-            Our Services
-          </Link>
-        </div>
-      </motion.div>
+{/* Hero Section */}
+<div className="relative w-full h-full flex flex-col lg:flex-row items-center justify-center text-center px-4 sm:px-6 md:px-10">
+  {/* Content Section */}
+  <motion.div
+    className="relative z-10 max-w-2xl bg-transparent bg-opacity-80 text-white p-6 rounded-lg flex flex-col mt-auto lg:mt-0"
+    initial={{ opacity: 0, y: -50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1, ease: "easeOut" }}
+  >
+    {/* Animated Quote Section */}
+    <div className="h-24 flex items-center justify-center">
+      <AnimatePresence mode="wait">
+        <motion.h1
+          key={index}
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 1 }}
+        >
+          {quotes[index]}
+        </motion.h1>
+      </AnimatePresence>
     </div>
+
+    {/* Button and Link */}
+    <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+      <Link
+        to="/contact"
+        className="px-6 py-3 bg-white border-2 border-white text-black rounded-lg shadow-lg hover:bg-black hover:text-white transition duration-300"
+      >
+        Contact Us
+      </Link>
+
+      <Link
+        to="/services"
+        className="px-6 py-3 border-2 border-white text-white rounded-lg shadow-lg hover:bg-white hover:text-black transition duration-300"
+      >
+        Our Services
+      </Link>
+    </div>
+  </motion.div>
+</div>
+
     <section  style={{ backgroundColor: "#ddd8d3" }} className="py-10 px-4 sm:px-6 md:px-10">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6">
         {/* Left Side - Image */}
@@ -221,22 +221,27 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="linkedin">
-      <div className="flex flex-col lg:flex-row justify-center gap-20 p-6 bg-white">
-      {posts.map((post, index) => (
-        <iframe
-          key={index}
-          src={post}
-          height="1050"
-          width="400"
-          frameBorder="0"
-          allowFullScreen
-          className=" w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-[500px] justify-center  md:px-20"
-          title={`LinkedIn Reel ${index + 1}`}
-        ></iframe>
-      ))}
-    </div>
-      </section>
+      <section className="linkedin p-4  bg-white">
+      {/* Mobile: Horizontal scroll | Desktop: Stays same */}
+      <div className="flex flex-nowrap lg:flex-row gap-6 overflow-x-auto lg:overflow-visible snap-x snap-mandatory lg:px-40 scrollbar-hide">
+        {posts.map((post, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 w-[85%] sm:w-[80%] md:w-[60%] lg:w-auto snap-center lg:px-20"
+          >
+            <iframe
+              src={post}
+              height="600"
+              width="400"
+              frameBorder="0"
+              allowFullScreen
+              className="w-full h-[500px] rounded-lg shadow-lg"
+              title={`LinkedIn Reel ${index + 1}`}
+            ></iframe>
+          </div>
+        ))}
+      </div>
+    </section>
       <Footer />
 
     </div>

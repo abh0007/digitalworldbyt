@@ -120,7 +120,7 @@ const ContactUs = () => {
           <h3 className="text-xl font-semibold mb-4">Address</h3>
           <p className="text-black">
             123 Digital Street, Hyderabad, India <br />
-            Phone: +91 98765 43210 <br />
+            Phone: +91 8887813257 <br />
             Email: contact@digitalworldbyt.com
           </p>
           <div className="flex space-x-4 mt-4">
