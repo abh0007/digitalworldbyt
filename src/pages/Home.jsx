@@ -56,7 +56,7 @@ function Home() {
 <div className="relative w-full h-full flex flex-col lg:flex-row items-center justify-center text-center px-4 sm:px-6 md:px-10">
   {/* Content Section */}
   <motion.div
-    className="relative z-10 max-w-2xl bg-transparent bg-opacity-80 text-white p-6 rounded-lg flex flex-col mt-auto lg:mt-0"
+    className="relative z-10 max-w-2xl bg-transparent bg-opacity-80 text-white p-6 rounded-lg flex flex-col mt-auto mb-6 lg:mt-0"
     initial={{ opacity: 0, y: -50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 1, ease: "easeOut" }}
