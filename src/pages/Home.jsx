@@ -168,9 +168,9 @@ function Home() {
         {/* Desktop Grid View */}
         <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
           {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-center">
+            <div key={index} className="flex flex-col items-center lg:px-50">
               {stat.icon}
-              <span className="text-4xl font-bold text-white mt-4">{stat.value}</span>
+              <span className="text-4xl font-bold text-white mt-4 ">{stat.value}</span>
               <span className="text-lg">{stat.label}</span>
             </div>
           ))}
@@ -190,63 +190,64 @@ function Home() {
     </section>
      {/* How We Can Help You Section */}
      <section className="py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto text-center">
-          <motion.h2
-            className="text-3xl sm:text-4xl font-bold text-gray-800"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            How We Can Help You?
-          </motion.h2>
+  <div className="max-w-6xl mx-auto text-center">
+    <motion.h2
+      className="text-3xl sm:text-4xl font-bold text-gray-800"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
+      How We Can Help You?
+    </motion.h2>
 
-          <motion.p
-            className="mt-4 text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            We are a passionate digital marketing agency dedicated to driving results for businesses of all sizes.
-            Our mission is to deliver innovative solutions that elevate brands and connect them with their target audiences.
-          </motion.p>
-        </div>
+    <motion.p
+      className="mt-4 text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+    >
+      We are a passionate digital marketing agency dedicated to driving results for businesses of all sizes.
+      Our mission is to deliver innovative solutions that elevate brands and connect them with their target audiences.
+    </motion.p>
+  </div>
 
-        {/* Services Grid */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {[
-            { icon: '🎧', title: 'One click support', description: 'Effortlessly connect with our support team to resolve your concerns in no time. Our one-click solution ensures swift assistance to keep you moving forward without delays.' },
-            { icon: '📈', title: 'Sky rocket sales', description: 'Boost your business growth with tailored strategies designed to maximize revenue and drive customer engagement. Take your sales to the next level with impactful solutions.' },
-            { icon: '📋', title: 'Quick Onboarding', description: 'Experience a seamless and efficient onboarding process. We simplify every step to get you up and running in no time, saving effort and maximizing productivity.' },
-            { icon: '📦', title: 'Product development', description: 'Transform your ideas into reality with our comprehensive product development solutions. From concept to execution, we deliver innovation that drives success.' },
-            { icon: '📁', title: 'Quality content', description: 'Stand out with content that resonates. Our high-quality, tailored messaging ensures your brand captures attention and delivers value to your audience.' },
-            { icon: '📊', title: 'Result with impact', description: 'Achieve measurable outcomes that matter. Our results-oriented approach delivers impactful solutions, ensuring your goals are not just met but exceeded.' },
-          ].map((service, index) => (
-            
-            <motion.div
-              key={index}
-              className="bg-white p-6 rounded-lg text-center shadow-lg hover:shadow-2xl transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <motion.div 
-                className="text-5xl mb-4"
-                whileHover={{ rotate: 10 }}
-              >
-                {service.icon}
-              </motion.div>
-              <h3 className="text-xl font-semibold text-gray-800">{service.title}</h3>
-              <p className="text-gray-600 mt-2">{service.description}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+  {/* Services Grid with Border Net Structure */}
+  <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-gray-300 max-w-6xl mx-auto">
+    {[
+      { icon: '🎧', title: 'One click support', description: 'Effortlessly connect with our support team to resolve your concerns in no time. Our one-click solution ensures swift assistance to keep you moving forward without delays.' },
+      { icon: '📈', title: 'Sky rocket sales', description: 'Boost your business growth with tailored strategies designed to maximize revenue and drive customer engagement. Take your sales to the next level with impactful solutions.' },
+      { icon: '📋', title: 'Quick Onboarding', description: 'Experience a seamless and efficient onboarding process. We simplify every step to get you up and running in no time, saving effort and maximizing productivity.' },
+      { icon: '📦', title: 'Product development', description: 'Transform your ideas into reality with our comprehensive product development solutions. From concept to execution, we deliver innovation that drives success.' },
+      { icon: '📁', title: 'Quality content', description: 'Stand out with content that resonates. Our high-quality, tailored messaging ensures your brand captures attention and delivers value to your audience.' },
+      { icon: '📊', title: 'Result with impact', description: 'Achieve measurable outcomes that matter. Our results-oriented approach delivers impactful solutions, ensuring your goals are not just met but exceeded.' },
+    ].map((service, index) => (
+      <motion.div
+        key={index}
+        className="bg-white p-6 text-center hover:shadow-xl transition-all duration-300 border border-gray-300"
+        whileHover={{ scale: 1.05 }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: index * 0.1 }}
+      >
+        <motion.div 
+          className="text-5xl mb-4"
+          whileHover={{ rotate: 10 }}
+        >
+          {service.icon}
+        </motion.div>
+        <h3 className="text-xl font-semibold text-gray-800">{service.title}</h3>
+        <p className="text-gray-600 mt-2">{service.description}</p>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
+
 
       {/* Trusted Brands Section */}
       <section className="py-20 bg-black">
         <div className="max-w-8xl mx-auto text-container text-center">
-          <h2 className="text-white text-3xl sm:text-4xl font-bold mb-6">Brands Trusted Us</h2>
+          <h2 className="text-white text-xl sm:text-xl md:text-3xl lg:text-4xl font-bold mb-6">Brands Trusted Us</h2>
           <div className="brand-slider flex overflow-hidden">
             <div className="animate-loop-scroll flex gap-8">
               {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg", "logo13.jpg"].map((logo, index) => (
@@ -262,12 +263,13 @@ function Home() {
         </div>
       </section>
       <section className="linkedin p-4  bg-white">
+      <h2 className="text-black text-center p-5 text-xl sm:text-xl md:text-3xl lg:text-4xl font-bold  mb-6">Free Advice From the Founder</h2>
       {/* Mobile: Horizontal scroll | Desktop: Stays same */}
       <div className="flex flex-nowrap lg:flex-row gap-6 overflow-x-auto lg:overflow-visible snap-x snap-mandatory lg:px-40 scrollbar-hide">
         {posts.map((post, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-[85%] sm:w-[80%] md:w-[60%] lg:w-auto snap-center lg:px-20"
+            className="flex-shrink-0 w-[85%] sm:w-[80%] md:w-[60%] lg:w-auto snap-center lg:px-26"
           >
             <iframe
               src={post}
