@@ -15,7 +15,7 @@ function Navbar() {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src="/logo5.png" alt="Logo" className="h-14" />
+          <img src="/digitalworldlogo.png" alt="Logo" className="h-14" />
         </Link>
 
         {/* Mobile Hamburger Button */}
