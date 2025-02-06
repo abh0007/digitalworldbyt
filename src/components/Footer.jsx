@@ -57,7 +57,7 @@ const ContactUs = () => {
         
         {/* Logo & About */}
         <div className="flex flex-col items-center md:items-start">
-          <img src="/logo5.png" alt="Company Logo" className="w-50 mb-4" />
+          <img src="/digitalworldlogo.png" alt="Company Logo" className="w-50 mb-4" />
           <p className="text-black text-sm">
             Empowering businesses with cutting-edge digital solutions. Join us on our journey to innovation.
           </p>

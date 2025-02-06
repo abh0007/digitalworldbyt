@@ -6,6 +6,7 @@ import Footer from "../components/Footer"; // Ensure correct import path
 
 
 function Home() {
+  
   const quotes = [
     "More Than an Agency— We’re your In-House Digital Marketing Team",
     "Drive Growth with Results-Driven Digital Marketing",
@@ -37,6 +38,12 @@ function Home() {
       link: "/services#seo-analytics",
     },
   ];
+  const posts = [
+    "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7292830163082387456?compact=1",
+    "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7291777433630883840?compact=1",
+    "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7290718816936828928?compact=1",
+  ];
+  
   return (
     <div className="font-sans font-serif relative w-full h-screen">
       {/* Background Image */}
@@ -198,21 +205,37 @@ function Home() {
 
       {/* Trusted Brands Section */}
       <section className="py-20 bg-black">
-        <div className="max-w-10xl mx-auto text-container text-center">
+        <div className="max-w-8xl mx-auto text-container text-center">
           <h2 className="text-white text-3xl sm:text-4xl font-bold mb-6">Our Trusted Brands</h2>
           <div className="brand-slider flex overflow-hidden">
             <div className="animate-loop-scroll flex gap-8">
-              {["logo6.jpg", "logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg", "logo13.jpg"].map((logo, index) => (
+              {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg", "logo13.jpg"].map((logo, index) => (
                 <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
               ))}
             </div>
             <div className="animate-loop-scroll flex gap-8" aria-hidden="true">
-              {["logo6.jpg", "logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg", "logo13.jpg"].map((logo, index) => (
+              {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg", "logo13.jpg"].map((logo, index) => (
                 <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
               ))}
             </div>
           </div>
         </div>
+      </section>
+      <section className="linkedin">
+      <div className="flex flex-col lg:flex-row justify-center gap-20 p-6 bg-white">
+      {posts.map((post, index) => (
+        <iframe
+          key={index}
+          src={post}
+          height="1050"
+          width="400"
+          frameBorder="0"
+          allowFullScreen
+          className=" w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-[500px] justify-center  md:px-20"
+          title={`LinkedIn Reel ${index + 1}`}
+        ></iframe>
+      ))}
+    </div>
       </section>
       <Footer />
 
