@@ -42,7 +42,7 @@ function Home() {
   ];
   const posts = [
     "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7292830163082387456?compact=1",
-    "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7291777433630883840?compact=1",
+    "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7282264987274723328?compact=1",
     "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7290718816936828928?compact=1",
   ];
   const stats = [
