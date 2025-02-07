@@ -113,7 +113,7 @@ function About() {
         viewport={{ once: true }}
       >
         <h2 className="text-3xl font-bold text-black">Our Values & Culture</h2>
-        <p className="mt-4 ml-20 text-lg text-gray-700 max-w-2xl mx-auto">
+        <p className="mt-4 text-center text-lg text-gray-700 max-w-2xl mx-auto">
           Integrity, innovation, and collaboration define us. We strive for excellence and foster a growth mindset within our team and clients.
         </p>
       </motion.section>

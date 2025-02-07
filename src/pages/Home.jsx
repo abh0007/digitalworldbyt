@@ -104,6 +104,36 @@ function Home() {
     </div>
   </motion.div>
 </div>
+<section className="bg-black text-white py-16">
+      <div className="max-w-6xl mx-auto text-center px-0">
+        <h2 className="text-4xl font-bold mb-6 text-white">Our Experience</h2>
+        <p className="text-lg mb-12">
+          Empowering businesses with our expertise across multiple industries and countries.
+        </p>
+
+        {/* Desktop Grid View */}
+        <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-80">
+          {stats.map((stat, index) => (
+            <div key={index} className="flex flex-col items-center lg:px-0">
+              {stat.icon}
+              <span className="text-4xl font-bold text-white mt-4 ">{stat.value}</span>
+              <span className="text-lg">{stat.label}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile Scrollable View */}
+        <div className="md:hidden overflow-x-auto flex space-x-8 w-full px-4 scrollbar-hide">
+          {stats.map((stat, index) => (
+            <div key={index} className="flex flex-col items-center min-w-[200px]">
+              {stat.icon}
+              <span className="text-4xl font-bold text-white mt-4">{stat.value}</span>
+              <span className="text-lg">{stat.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
     <section  style={{ backgroundColor: "#ddd8d3" }} className="py-10 px-4 sm:px-6 md:px-10">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6">
@@ -159,36 +189,7 @@ function Home() {
         </div>
       </div>
     </section>
-    <section className="bg-black text-white py-16">
-      <div className="max-w-6xl mx-auto text-center px-0">
-        <h2 className="text-4xl font-bold mb-6 text-white">Our Experience</h2>
-        <p className="text-lg mb-12">
-          Empowering businesses with our expertise across multiple industries and countries.
-        </p>
-
-        {/* Desktop Grid View */}
-        <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-80">
-          {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-center lg:px-0">
-              {stat.icon}
-              <span className="text-4xl font-bold text-white mt-4 ">{stat.value}</span>
-              <span className="text-lg">{stat.label}</span>
-            </div>
-          ))}
-        </div>
-
-        {/* Mobile Scrollable View */}
-        <div className="md:hidden overflow-x-auto flex space-x-8 w-full px-4 scrollbar-hide">
-          {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-center min-w-[200px]">
-              {stat.icon}
-              <span className="text-4xl font-bold text-white mt-4">{stat.value}</span>
-              <span className="text-lg">{stat.label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    
      {/* How We Can Help You Section */}
      <section className="py-20 bg-gray-50">
   <div className="max-w-6xl mx-auto text-center">

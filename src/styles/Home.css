@@ -40,7 +40,7 @@
 }
 
 .brand-slider img {
-  height: 100px; /* h-16 in Tailwind */
+  height: 120px; /* h-16 in Tailwind */
   margin-right: 2.5rem; /* space-x-10 */
   padding-left: 100px;
 }
