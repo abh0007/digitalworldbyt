@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaWhatsapp, FaYoutube, FaInstagram, FaLinkedin } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
 const ContactUs = () => {
@@ -124,10 +124,14 @@ const ContactUs = () => {
             Email: contact@digitalworldbyt.com
           </p>
           <div className="flex space-x-4 mt-4">
-            <a href="#" className="text-gray-500 hover:text-blue-500"><FaFacebook size={24} /></a>
-            <a href="#" className="text-gray-500 hover:text-blue-300"><FaTwitter size={24} /></a>
-            <a href="#" className="text-gray-500 hover:text-pink-500"><FaInstagram size={24} /></a>
-            <a href="#" className="text-gray-500 hover:text-blue-600"><FaLinkedin size={24} /></a>
+          <a href="https://wa.me/918887813257" className="text-gray-500 hover:text-green-500">
+  <FaWhatsapp size={24} />
+</a>
+<a href="https://www.youtube.com/@DigitalWorldByT" className="text-gray-500 hover:text-red-500">
+  <FaYoutube size={24} />
+</a>
+            <a href="https://www.instagram.com/digitalworldbyt/" className="text-gray-500 hover:text-pink-500"><FaInstagram size={24} /></a>
+            <a href="https://www.linkedin.com/in/tanya-narula-972a64211/" className="text-gray-500 hover:text-blue-600"><FaLinkedin size={24} /></a>
           </div>
         </div>
       </div>

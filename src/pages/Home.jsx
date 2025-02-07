@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import '../styles/Home.css';
 import Footer from "../components/Footer"; // Ensure correct import path
-import { FaGlobe, FaClock, FaProjectDiagram, FaSmile, FaIndustry } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe, faTrophy, faCheckCircle, faHandshake, faBuilding } from "@fortawesome/free-solid-svg-icons";
 
 
 function Home() {
@@ -45,11 +46,11 @@ function Home() {
     "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7290718816936828928?compact=1",
   ];
   const stats = [
-    { icon: <FaGlobe className="text-gray-400 text-5xl" />, value: "20+", label: "Countries Served" },
-    { icon: <FaClock className="text-gray-400 text-5xl" />, value: "5+", label: "Years of Experience" },
-    { icon: <FaProjectDiagram className="text-gray-400 text-5xl" />, value: "100+", label: "Successful Projects" },
-    { icon: <FaSmile className="text-gray-400 text-5xl" />, value: "50+", label: "Happy Clients" },
-    { icon: <FaIndustry className="text-gray-400 text-5xl" />, value: "10+", label: "Industries Covered" },
+    { icon: <FontAwesomeIcon icon={faGlobe} className="text-blue-500 text-5xl" />, value: "20+", label: "Countries Served" },
+    { icon: <FontAwesomeIcon icon={faTrophy} className="text-yellow-500 text-5xl" />, value: "5+", label: "Years of Experience" },
+    { icon: <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-5xl" />, value: "100+", label: "Successful Projects" },
+    { icon: <FontAwesomeIcon icon={faHandshake} className="text-purple-500 text-5xl" />, value: "50+", label: "Happy Clients" },
+    { icon: <FontAwesomeIcon icon={faBuilding} className="text-orange-500 text-5xl" />, value: "10+", label: "Industries Covered" },
   ];
 
   return (
@@ -159,16 +160,16 @@ function Home() {
       </div>
     </section>
     <section className="bg-black text-white py-16">
-      <div className="max-w-6xl mx-auto text-center px-6">
+      <div className="max-w-6xl mx-auto text-center px-0">
         <h2 className="text-4xl font-bold mb-6 text-white">Our Experience</h2>
         <p className="text-lg mb-12">
           Empowering businesses with our expertise across multiple industries and countries.
         </p>
 
         {/* Desktop Grid View */}
-        <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-80">
           {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-center lg:px-50">
+            <div key={index} className="flex flex-col items-center lg:px-0">
               {stat.icon}
               <span className="text-4xl font-bold text-white mt-4 ">{stat.value}</span>
               <span className="text-lg">{stat.label}</span>
