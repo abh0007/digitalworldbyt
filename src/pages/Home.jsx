@@ -248,22 +248,42 @@ function Home() {
 
       {/* Trusted Brands Section */}
       <section className="py-20 bg-black">
-        <div className="max-w-8xl mx-auto text-container text-center">
-          <h2 className="text-white text-xl sm:text-xl md:text-3xl lg:text-4xl font-bold mb-6">Brands Trusted Us</h2>
-          <div className="brand-slider flex overflow-hidden">
-            <div className="animate-loop-scroll flex gap-8">
-              {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg", "logo13.jpg"].map((logo, index) => (
-                <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
-              ))}
-            </div>
-            <div className="animate-loop-scroll flex gap-8" aria-hidden="true">
-              {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg", "logo13.jpg"].map((logo, index) => (
-                <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="max-w-8xl mx-auto text-container text-center">
+    <h2 className="text-white text-xl sm:text-xl md:text-3xl lg:text-4xl font-bold mb-6">
+      Brands Trusted Us
+    </h2>
+    
+    {/* Brand Slider 1 (Left to Right) */}
+    <div className="brand-slider flex overflow-hidden">
+      <div className="animate-loop-scroll-ltr flex gap-8">
+        {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg", "logo13.jpg"].map((logo, index) => (
+          <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
+        ))}
+      </div>
+      <div className="animate-loop-scroll-ltr flex gap-8" aria-hidden="true">
+        {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg", "logo13.jpg"].map((logo, index) => (
+          <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
+        ))}
+      </div>
+    </div>
+
+    {/* Brand Slider 2 (Right to Left) */}
+    <div className="brand-slider2 flex overflow-hidden mt-10">
+      <div className="animate-loop-scroll-rtl flex gap-8">
+        {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg", "logo13.jpg"].map((logo, index) => (
+          <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
+        ))}
+      </div>
+      <div className="animate-loop-scroll-rtl flex gap-8" aria-hidden="true">
+        {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg", "logo13.jpg"].map((logo, index) => (
+          <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
+
       <section className="linkedin p-4  bg-white">
       <h2 className="text-black text-center p-5 text-xl sm:text-xl md:text-3xl lg:text-4xl font-bold  mb-6">Free Advice From the Founder</h2>
       {/* Mobile: Horizontal scroll | Desktop: Stays same */}
