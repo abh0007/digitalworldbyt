@@ -330,13 +330,13 @@ function Home() {
 
     {/* Brand Slider 2 (Right to Left) */}
     <div className="brand-slider2 flex overflow-hidden mt-10">
-      <div className="animate-loop-scroll-rtl flex gap-20">
-        {["logo20.jpg", "logo21.jpg", "logo22.jpg", "logo23.jpg", "logo13.jpg"].map((logo, index) => (
+      <div className="animate-loop-scroll-rtl flex gap-15">
+        {["logo20.jpg", "logo21.jpg", "logo22.jpg", "logo23.jpg", "logo13.jpg", "logo24.jpg"].map((logo, index) => (
           <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
         ))}
       </div>
-      <div className="animate-loop-scroll-rtl flex gap-20" aria-hidden="true">
-        {["logo20.jpg", "logo21.jpg", "logo22.jpg", "logo23.jpg", "logo13.jpg"].map((logo, index) => (
+      <div className="animate-loop-scroll-rtl flex gap-15" aria-hidden="true">
+        {["logo20.jpg", "logo21.jpg", "logo22.jpg", "logo23.jpg", "logo13.jpg", "logo24.jpg"].map((logo, index) => (
           <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
         ))}
       </div>

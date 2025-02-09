@@ -4,24 +4,24 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "John Doe",
-    review: "This service has transformed our marketing strategy. Highly recommended!",
-    company: "TechCorp",
-    logo: "/logo10.jpg",
+    name: "Lakshay Ahuja(3rd Gen,Director)",
+    review: "Digital World is a true blessing for our business,we have been working with digital world from 2years now and the way Tanya has been taking care of all the digital services and every week she personal takes meeting with our team is just incredible! So happy with the services. ",
+    company: "Ahuja Silk & Sarees",
+    logo: "/reviewlogo1.jpg",
     rating: 5,
   },
   {
-    name: "Emily Smith",
-    review: "Outstanding results! Our engagement rates skyrocketed.",
-    company: "Creative Solutions",
-    logo: "/logo7.jpg",
+    name: "Naveen Dabra",
+    review: "In gaming industry we were facing too much problems in running ads and making our digital presence Digital World so authentically help us to develop our website and social media presence and brought us amazing quality leads.",
+    company: "Diamond Exch",
+    logo: "/logo24.jpg",
     rating: 5,
   },
   {
-    name: "Michael Johnson",
-    review: "Reliable and effective. A game-changer for our business!",
-    company: "MarketPlus",
-    logo: "/logo8.jpg",
+    name: "Amit Sulankhe(Founder)",
+    review: "We had been with Digital World since we started our business so from scratch to a well known company DW is there,We are soo happy with service one of the best thing about digital world is availability as we have timezone difference but the team has been available for us always and the deliverable are always on time!",
+    company: "EU Transline",
+    logo: "/logo20.jpg",
     rating: 5,
   },
 ];
@@ -48,7 +48,7 @@ export default function Testimonials() {
         <div className="relative w-full max-w-2xl p-6 bg-white rounded-xl shadow-lg">
           {/* Previous Button */}
           <button
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full shadow-lg"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-transparent text-black p-2 rounded-full shadow-lg"
             onClick={prevTestimonial}
           >
             <ChevronLeft size={24} />
@@ -84,7 +84,7 @@ export default function Testimonials() {
 
           {/* Next Button */}
           <button
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full shadow-lg"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-transparent text-black p-2 rounded-full shadow-lg"
             onClick={nextTestimonial}
           >
             <ChevronRight size={24} />
