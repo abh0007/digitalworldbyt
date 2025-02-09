@@ -180,7 +180,7 @@ function Home() {
     <div className="w-full md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start">
       <h3 className="text-lg text-gray-600 font-semibold">Hear It From</h3>
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
-        Miss. Tanya Narula
+        Ms Tanya Narula
       </h2>
       <p className="text-sm sm:text-base text-gray-500 mt-1">
         (Founder, Digital Marketing Expert)
