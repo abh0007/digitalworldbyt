@@ -6,6 +6,12 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./ScrollToTop"
+import Ads from "./pages/Ads";
+import Abhi from "./pages/Abhi";
+import Testimonials from "./pages/Testemonials";
+import "@fontsource/roboto"; // Default weight (400)
+import "@fontsource/roboto/300.css"; // Light
+import "@fontsource/roboto/700.css"; // Bold
 
 
 function App() {
@@ -18,6 +24,10 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/Ads" element={<Ads/>} />
+        <Route path="/Abhi" element={<Abhi/>} />
+        <Route path="/Testemonials" element={<Abhi/>} />
+        
       </Routes>
       <Footer />
     </div>

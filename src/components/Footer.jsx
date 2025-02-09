@@ -52,7 +52,7 @@ const ContactUs = () => {
   };
 
   return (
-    <footer className="bg-white text-black py-10 font-sans font-serif ">
+    <footer className="bg-white text-black py-10 font-roboto ">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
         
         {/* Logo & About */}

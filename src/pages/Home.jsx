@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import '../styles/Home.css';
 import Footer from "../components/Footer"; // Ensure correct import path
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe, faTrophy, faCheckCircle, faHandshake, faBuilding } from "@fortawesome/free-solid-svg-icons";
+import Ads from "./Ads";
+import Testimonials from "./Testemonials";
 
 
 function Home() {
@@ -23,6 +23,8 @@ function Home() {
 
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, []);
+
+  
   const services = [
     {
       title: "Performance Marketing",
@@ -30,15 +32,26 @@ function Home() {
       link: "/services#digital-marketing",
     },
     {
-      title: "Social Media and Influencer Marketing",
+      title: "Social Media Marketing",
       image: "/influencer.jpg", // Update with actual path
       link: "/services#social-media",
     },
     {
-      title: "SEO and Data Analytics",
+      title: "SEO and Website Development",
       image: "/google.png", // Update with actual path
       link: "/services#seo-analytics",
     },
+    {
+      title: "Influencer Marketing",
+      image: "/influencermarketing.png", // Update with actual path
+      link: "/services#digital-marketing",
+    },
+    {
+      title: "PR Channel",
+      image: "/prchannel.png", // Update with actual path
+      link: "/services#digital-marketing",
+    },
+    
   ];
   const posts = [
     "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7292830163082387456?compact=1",
@@ -46,54 +59,79 @@ function Home() {
     "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7290718816936828928?compact=1",
   ];
   const stats = [
-    { icon: <FontAwesomeIcon icon={faGlobe} className="text-blue-500 text-5xl" />, value: "20+", label: "Countries Served" },
-    { icon: <FontAwesomeIcon icon={faTrophy} className="text-yellow-500 text-5xl" />, value: "5+", label: "Years of Experience" },
-    { icon: <FontAwesomeIcon icon={faCheckCircle} className="text-green-500 text-5xl" />, value: "100+", label: "Successful Projects" },
-    { icon: <FontAwesomeIcon icon={faHandshake} className="text-purple-500 text-5xl" />, value: "50+", label: "Happy Clients" },
-    { icon: <FontAwesomeIcon icon={faBuilding} className="text-orange-500 text-5xl" />, value: "10+", label: "Industries Covered" },
+    { 
+      icon: <img src="/globe.png" className="w-30 h-30" alt="Countries Served" />, 
+      value: "20+", 
+      label: "Countries Served" 
+    },
+    { 
+      icon: <img src="/award.png" className="w-30 h-30" alt="Years of Experience" />, 
+      value: "5+", 
+      label: "Years of Experience" 
+    },
+    { 
+      icon: <img src="/check.png" className="w-30 h-30" alt="Successful Projects" />, 
+      value: "100+", 
+      label: "Successful Projects" 
+    },
+    { 
+      icon: <img src="/handshake.png" className="w-30 h-30" alt="Happy Clients" />, 
+      value: "50+", 
+      label: "Happy Clients" 
+    },
+    { 
+      icon: <img src="/industry.png" className="w-30 h-30" alt="Industries Covered" />, 
+      value: "10+", 
+      label: "Industries Covered" 
+    }
   ];
+  
+  
 
+  
   return (
-    <div className="font-sans font-serif relative w-full h-screen">
+    <div className="font-roboto relative w-full h-screen">
       {/* Background Image */}
       <div 
   className="absolute inset-0 bg-cover bg-center z-0"
   style={{ backgroundImage: "url('/homebg.jpg')" }}
 ></div>
 
-{/* Hero Section */}
-<div className="relative w-full h-full flex flex-col lg:flex-row items-center justify-center text-center px-4 sm:px-6 md:px-10">
+{/* Hero Section */}<div className="relative w-full h-full flex flex-col lg:flex-row items-center justify-center text-center px-4 sm:px-6 md:px-10">
   {/* Content Section */}
   <motion.div
-    className="relative z-10 max-w-2xl bg-transparent bg-opacity-80 text-white p-6 rounded-lg flex flex-col mt-auto mb-20 lg:mt-0"
+    className="relative z-10 max-w-3xl bg-transparent bg-opacity-80 text-white p-0 rounded-lg flex flex-col mt-auto mb-20 lg:mt-20"
     initial={{ opacity: 0, y: -50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 1, ease: "easeOut" }}
   >
     {/* Animated Quote Section */}
-    <div className="h-24 flex items-center justify-center">
+    <div className="h-24 flex lg:w-221 items-center justify-center">
       <AnimatePresence mode="wait">
-        <motion.h1
+        <motion.h5
           key={index}
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl lg:2xl font-bold leading-tight  mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 1 }}
         >
           {quotes[index]}
-        </motion.h1>
+        </motion.h5>
       </AnimatePresence>
     </div>
 
     {/* Button and Link */}
-    <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-      <Link
-        to="/contact"
-        className="px-6 py-3 bg-white border-2 border-white text-black rounded-lg shadow-lg hover:bg-black hover:text-white transition duration-300"
-      >
-        Contact Us
-      </Link>
+    <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:ml-20">
+    <a
+  href="https://wa.me/1234567890" // Replace with your actual WhatsApp number
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-6 py-3 bg-white border-2 border-white text-black rounded-lg shadow-lg hover:bg-black hover:text-white transition duration-300"
+>
+  Contact Us
+</a>
+
 
       <Link
         to="/services"
@@ -103,71 +141,14 @@ function Home() {
       </Link>
     </div>
   </motion.div>
+
 </div>
-<section className="bg-black text-white py-16">
-      <div className="max-w-6xl mx-auto text-center px-0">
-        <h2 className="text-4xl font-bold mb-6 text-white">Our Experience</h2>
-        <p className="text-lg mb-12">
-          Empowering businesses with our expertise across multiple industries and countries.
-        </p>
 
-        {/* Desktop Grid View */}
-        <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-80">
-          {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-center lg:px-0">
-              {stat.icon}
-              <span className="text-4xl font-bold text-white mt-4 ">{stat.value}</span>
-              <span className="text-lg">{stat.label}</span>
-            </div>
-          ))}
-        </div>
 
-        {/* Mobile Scrollable View */}
-        <div className="md:hidden overflow-x-auto flex space-x-8 w-full px-4 scrollbar-hide">
-          {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-center min-w-[200px]">
-              {stat.icon}
-              <span className="text-4xl font-bold text-white mt-4">{stat.value}</span>
-              <span className="text-lg">{stat.label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section  style={{ backgroundColor: "#ddd8d3" }} className="py-10 px-4 sm:px-6 md:px-10">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6">
-        {/* Left Side - Image */}
-        
-
-        {/* Right Side - Text Content */}
-        <div className="w-full md:w-1/2 text-center md:text-center">
-          <h3 className="text-lg text-gray-600 font-semibold">Hear It From</h3>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
-            Miss. Tanya Narula
-          </h2>
-          <p className="text-sm sm:text-base text-gray-500 mt-1">
-            (Founder, Digital Marketing Expert)
-          </p>
-          <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-            "Digital World is not just an agency, it's a revolution in marketing."
-          </p>
-        </div>
-        <div className="w-full md:w-1/2 flex justify-center">
-          <img
-            src="/tanya.jpg" // Replace with actual image path
-            alt="Tanya Narula"
-            className="w-full md:w-[80%] rounded-lg shadow-lg object-cover"
-          />
-        </div>
-      </div>
-    </section>
-
-     
-      <section className="py-12 bg-white">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-8 text-black">What We Offer</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6 text-black">
+<section className="py-12 bg-white">
+      <div className="max-w-8xl mx-auto text-center">
+        <h2 className="text-5xl font-bold mb-8 text-black">What We Offer</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-12 px-6 text-black">
           {services.map((service, index) => (
             <Link
               key={index}
@@ -177,10 +158,10 @@ function Home() {
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-full h-56 object-cover"
+                className="w-full h-70 object-cover"
               />
               <div className="p-4 text-center">
-                <h3 className="text-lg font-semibold group-hover:text-blue-400">
+                <h3 className="text-xl font-semibold group-hover:text-blue-400">
                   {service.title}
                 </h3>
               </div>
@@ -189,6 +170,85 @@ function Home() {
         </div>
       </div>
     </section>
+    
+
+
+    <section style={{ backgroundColor: "#ddd8d3" }} className="sm:py-10 lg:py-0 px-4 sm:px-6 md:px-10">
+  <div className="max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center gap-6">
+    
+    {/* Left Side - Text Content */}
+    <div className="w-full md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start">
+      <h3 className="text-lg text-gray-600 font-semibold">Hear It From</h3>
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+        Miss. Tanya Narula
+      </h2>
+      <p className="text-sm sm:text-base text-gray-500 mt-1">
+        (Founder, Digital Marketing Expert)
+      </p>
+
+      {/* On Mobile, the image comes here */}
+      <div className="w-full md:hidden flex justify-center mt-4">
+        <img 
+          src="/tanya.jpg" 
+          alt="Tanya Narula"
+          className="w-full sm:w-[80%] rounded-lg shadow-lg object-cover"
+        />
+      </div>
+
+      {/* Main content below the image (in mobile) or to the right (in desktop) */}
+      <p className="mt-4 text-lg text-gray-700 leading-relaxed">
+        "Digital World is not just an agency; it’s a complete digital ecosystem where we provide end-to-end solutions for our clients. From web development and SEO to social media marketing and branding, we help businesses establish a strong digital presence. Our goal is to drive growth, engagement, and success through innovative strategies and tailored digital solutions."
+      </p>
+    </div>
+
+    {/* Left Side - Image (Desktop Only) */}
+    <div className="w-full md:w-1/2 hidden md:flex justify-center">
+      <img
+        src="/tanya.jpg"
+        alt="Tanya Narula"
+        className="w-full md:w-[80%] rounded-lg shadow-lg object-cover"
+      />
+    </div>
+
+  </div>
+</section>
+
+<section className="bg-black text-white py-16">
+  <div className="max-w-7xl mx-auto text-center px-0">
+    <h2 className="text-4xl font-bold mb-6 text-white">Our Experience</h2>
+    <p className="text-lg mb-12">
+      Empowering businesses with our expertise across multiple industries and countries.
+    </p>
+
+    {/* Desktop Grid View */}
+    <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-20">
+      {stats.map((stat, index) => (
+        <div key={index} className="flex flex-col items-center">
+          {stat.icon}
+          <span className="text-4xl font-bold mt-4">{stat.value}</span>
+          <span className="text-lg text-gray-300">{stat.label}</span>
+        </div>
+      ))}
+    </div>
+
+    {/* Mobile Scrollable View */}
+    <div className="md:hidden overflow-x-auto flex space-x-8 w-full px-4 scrollbar-hide">
+      {stats.map((stat, index) => (
+        <div key={index} className="flex flex-col items-center min-w-[150px]">
+          {stat.icon}
+          <span className="text-3xl font-bold mt-4">{stat.value}</span>
+          <span className="text-base text-gray-300">{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+     
+      
+    
+    <Ads/>
     
      {/* How We Can Help You Section */}
      <section className="py-20 bg-gray-50">
@@ -212,6 +272,7 @@ function Home() {
       Our mission is to deliver innovative solutions that elevate brands and connect them with their target audiences.
     </motion.p>
   </div>
+ 
 
   {/* Services Grid with Border Net Structure */}
   <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-gray-300 max-w-6xl mx-auto">
@@ -255,13 +316,13 @@ function Home() {
     
     {/* Brand Slider 1 (Left to Right) */}
     <div className="brand-slider flex overflow-hidden">
-      <div className="animate-loop-scroll-ltr flex gap-8">
-        {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg", "logo13.jpg"].map((logo, index) => (
+      <div className="animate-loop-scroll-ltr flex gap-15">
+        {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg"].map((logo, index) => (
           <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
         ))}
       </div>
-      <div className="animate-loop-scroll-ltr flex gap-8" aria-hidden="true">
-        {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg", "logo13.jpg"].map((logo, index) => (
+      <div className="animate-loop-scroll-ltr flex gap-15" aria-hidden="true">
+        {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg"].map((logo, index) => (
           <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
         ))}
       </div>
@@ -269,13 +330,13 @@ function Home() {
 
     {/* Brand Slider 2 (Right to Left) */}
     <div className="brand-slider2 flex overflow-hidden mt-10">
-      <div className="animate-loop-scroll-rtl flex gap-8">
-        {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg", "logo13.jpg"].map((logo, index) => (
+      <div className="animate-loop-scroll-rtl flex gap-20">
+        {["logo20.jpg", "logo21.jpg", "logo22.jpg", "logo23.jpg", "logo13.jpg"].map((logo, index) => (
           <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
         ))}
       </div>
-      <div className="animate-loop-scroll-rtl flex gap-8" aria-hidden="true">
-        {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg", "logo13.jpg"].map((logo, index) => (
+      <div className="animate-loop-scroll-rtl flex gap-20" aria-hidden="true">
+        {["logo20.jpg", "logo21.jpg", "logo22.jpg", "logo23.jpg", "logo13.jpg"].map((logo, index) => (
           <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
         ))}
       </div>
@@ -283,9 +344,10 @@ function Home() {
 
   </div>
 </section>
+<Testimonials/>
 
       <section className="linkedin p-4  bg-white">
-      <h2 className="text-black text-center p-5 text-xl sm:text-xl md:text-3xl lg:text-4xl font-bold  mb-6">Free Advice From the Founder</h2>
+      <h2 className="text-black text-center p-5 text-xl sm:text-xl md:text-3xl lg:text-4xl font-bold  mb-6">Follow us On Linkedin</h2>
       {/* Mobile: Horizontal scroll | Desktop: Stays same */}
       <div className="flex flex-nowrap lg:flex-row gap-6 overflow-x-auto lg:overflow-visible snap-x snap-mandatory lg:px-40 scrollbar-hide">
         {posts.map((post, index) => (
@@ -306,7 +368,9 @@ function Home() {
         ))}
       </div>
     </section>
+    
       <Footer />
+      
 
     </div>
     

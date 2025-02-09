@@ -11,7 +11,7 @@ function Navbar() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white text-black text-lg p-2 shadow-md z-20 font-sans md:font-serif sm:font-serif">
+    <nav className="fixed top-0 left-0 w-full bg-white text-black text-lg p-2 shadow-md z-20 font-roboto.">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center">
@@ -72,17 +72,20 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link
-              to="/contact"
-              className={`px-6 border-2 py-2 rounded-lg font-semibold transition duration-300 ${
-                isActive("/contact")
-                  ? "bg-black text-white border-black"
-                  : "bg-white text-black border-black hover:bg-black hover:text-white"
-              }`}
-            >
-              Contact
-            </Link>
-          </li>
+  <a
+    href="https://wa.me/918887813257" // Replace with your actual WhatsApp number
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`px-6 border-2 py-2 rounded-lg font-semibold transition duration-300 ${
+      isActive("/contact")
+        ? "bg-black text-white border-black"
+        : "bg-white text-black border-black hover:bg-black hover:text-white"
+    }`}
+  >
+    Contact
+  </a>
+</li>
+
         </ul>
       </div>
 
@@ -124,17 +127,18 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link
-                to="/contact"
-                className={`px-6 border-2 py-2 rounded-lg font-semibold transition duration-300 ${
-                  isActive("/contact")
-                    ? "bg-black text-white border-black"
-                    : "bg-white text-black border-black hover:bg-black hover:text-white"
-                }`}
-                onClick={toggleMenu}
-              >
-                Contact
-              </Link>
+            <a
+    href="https://wa.me/918887813257" // Replace with your actual WhatsApp number
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`px-6 border-2 py-2 rounded-lg font-semibold transition duration-300 ${
+      isActive("/contact")
+        ? "bg-black text-white border-black"
+        : "bg-white text-black border-black hover:bg-black hover:text-white"
+    }`}
+  >
+    Contact
+  </a>
             </li>
           </ul>
         </div>
