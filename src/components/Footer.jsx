@@ -119,9 +119,9 @@ const ContactUs = () => {
         <div>
           <h3 className="text-xl font-semibold mb-4">Address</h3>
           <p className="text-black">
-            123 Digital Street, Hyderabad, India <br />
+            New Delhi, India <br />
             Phone: +91 8887813257 <br />
-            Email: contact@digitalworldbyt.com
+            Email: digitalw908@gmail.com
           </p>
           <div className="flex space-x-4 mt-4">
           <a href="https://wa.me/918887813257" className="text-gray-500 hover:text-green-500">
