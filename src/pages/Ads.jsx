@@ -6,7 +6,7 @@ const adImages = [
   "/ad1.png", // Replace with actual image paths
   "/ad2.png",
   "/ad3.png",
-  "/ad4.jpg",
+  "/ad4.png",
 ];
 
 const adTitles = [
@@ -66,7 +66,7 @@ export default function AdsThatPerform() {
               <img
                 src={adImages[index]}
                 alt="Ad Image"
-                className="w-full h-full object-cover rounded-lg shadow-lg p-10 lg:px-20 py-15"
+                className="w-full h-full object-cover rounded-lg shadow-lg p-10 lg:px-2 py-15"
               />
             </motion.div>
           </AnimatePresence>
