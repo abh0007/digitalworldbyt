@@ -127,3 +127,32 @@
 
    
 }
+/* ============================= */
+/* 🍏 iPhone-Specific Fix (No Changes for Others) */
+/* ============================= */
+@media screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2) {
+    .slider-track {
+        -webkit-transform: translate3d(0, 0, 0); /* Force GPU Acceleration */
+        -webkit-backface-visibility: hidden; /* Fix animation restart bug */
+        will-change: transform;
+    }
+
+    /* Tweaked Keyframes for Smoother iPhone Animation */
+    @-webkit-keyframes seamless-iphone-ltr {
+        from { -webkit-transform: translate3d(0, 0, 0); }
+        to { -webkit-transform: translate3d(-50%, 0, 0); }
+    }
+
+    @-webkit-keyframes seamless-iphone-rtl {
+        from { -webkit-transform: translate3d(-50%, 0, 0); }
+        to { -webkit-transform: translate3d(0, 0, 0); }
+    }
+
+    .animate-loop-scroll-ltr {
+        -webkit-animation: seamless-iphone-ltr 12s linear infinite;
+    }
+
+    .animate-loop-scroll-rtl {
+        -webkit-animation: seamless-iphone-rtl 12s linear infinite;
+    }
+}
