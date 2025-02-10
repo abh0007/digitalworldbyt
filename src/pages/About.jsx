@@ -131,17 +131,20 @@ function About() {
   </h2>
 
   {/* Draggable Logo Slider */}
-  <motion.div
-    className="mt-8 flex space-x-10 sm:space-x-16 overflow-x-auto cursor-grab p-4"
-    drag="x"
-    dragConstraints={{ left: -300, right: 0 }} // Adjusted for better mobile experience
-  >
-    <img src="/logo20.jpg" alt="Client 1" className="h-24 sm:h-32 md:h-40 flex-shrink-0" />
-    <img src="/logo7.jpg" alt="Client 2" className="h-24 sm:h-32 md:h-40 flex-shrink-0" />
-    <img src="/logo8.jpg" alt="Client 3" className="h-24 sm:h-32 md:h-40 flex-shrink-0" />
-    <img src="/logo9.jpg" alt="Client 4" className="h-24 sm:h-32 md:h-40 flex-shrink-0" />
-    <img src="/logo10.jpg" alt="Client 5" className="h-24 sm:h-32 md:h-40 flex-shrink-0" />
-  </motion.div>
+  <div className="relative overflow-hidden mt-8">
+    <motion.div
+      className="flex flex-nowrap gap-8 sm:gap-12 cursor-grab"
+      drag="x"
+      dragConstraints={{ left: -800, right: 0 }} // Ensures all logos are draggable
+    >
+      <img src="/logo20.jpg" alt="Client 1" className="h-24 sm:h-32 md:h-40 min-w-[100px] sm:min-w-[120px] md:min-w-[140px]" />
+      <img src="/logo7.jpg" alt="Client 2" className="h-24 sm:h-32 md:h-40 min-w-[100px] sm:min-w-[120px] md:min-w-[140px]" />
+      <img src="/logo8.jpg" alt="Client 3" className="h-24 sm:h-32 md:h-40 min-w-[100px] sm:min-w-[120px] md:min-w-[140px]" />
+      <img src="/logo9.jpg" alt="Client 4" className="h-24 sm:h-32 md:h-40 min-w-[100px] sm:min-w-[120px] md:min-w-[140px]" />
+      <img src="/logo10.jpg" alt="Client 5" className="h-24 sm:h-32 md:h-40 min-w-[100px] sm:min-w-[120px] md:min-w-[140px]" />
+      <img src="/logo11.jpg" alt="Client 6" className="h-24 sm:h-32 md:h-40 min-w-[100px] sm:min-w-[120px] md:min-w-[140px]" />
+    </motion.div>
+  </div>
 </motion.section>
 
       {/* Company Values & Culture */}
