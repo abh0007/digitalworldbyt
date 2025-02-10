@@ -120,27 +120,30 @@ function About() {
       </motion.section>
 
       <motion.section
-      className="py-20 px-10 bg-gray-100 text-center"
-      variants={fadeIn}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-    >
-      <h2 className="text-4xl font-bold text-black">Trusted by Leading Brands</h2>
+  className="py-20 px-6 sm:px-10 bg-gray-100 text-center"
+  variants={fadeIn}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
+  <h2 className="text-3xl sm:text-4xl font-bold text-black">
+    Trusted by Leading Brands
+  </h2>
 
-      {/* Draggable Logo Slider */}
-      <motion.div
-        className="mt-12 flex space-x-20 overflow-x-auto cursor-grab p-4  lg:ml-100"
-        drag="x"
-        dragConstraints={{ left: -500, right: 0 }} // Adjust constraints based on logo width
-      >
-        <img src="/logo20.jpg" alt="Client 1" className="h-40 flex-shrink-0" />
-        <img src="/logo7.jpg" alt="Client 2" className="h-40 flex-shrink-0" />
-        <img src="/logo8.jpg" alt="Client 3" className="h-40 flex-shrink-0" />
-        <img src="/logo9.jpg" alt="Client 4" className="h-40 flex-shrink-0" />
-        <img src="/logo10.jpg" alt="Client 5" className="h-40 flex-shrink-0" />
-      </motion.div>
-    </motion.section>
+  {/* Draggable Logo Slider */}
+  <motion.div
+    className="mt-8 flex space-x-10 sm:space-x-16 overflow-x-auto cursor-grab p-4"
+    drag="x"
+    dragConstraints={{ left: -300, right: 0 }} // Adjusted for better mobile experience
+  >
+    <img src="/logo20.jpg" alt="Client 1" className="h-24 sm:h-32 md:h-40 flex-shrink-0" />
+    <img src="/logo7.jpg" alt="Client 2" className="h-24 sm:h-32 md:h-40 flex-shrink-0" />
+    <img src="/logo8.jpg" alt="Client 3" className="h-24 sm:h-32 md:h-40 flex-shrink-0" />
+    <img src="/logo9.jpg" alt="Client 4" className="h-24 sm:h-32 md:h-40 flex-shrink-0" />
+    <img src="/logo10.jpg" alt="Client 5" className="h-24 sm:h-32 md:h-40 flex-shrink-0" />
+  </motion.div>
+</motion.section>
+
       {/* Company Values & Culture */}
       <motion.section
         className="py-20 px-10 bg-white text-center"
