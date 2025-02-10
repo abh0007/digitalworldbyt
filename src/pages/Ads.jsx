@@ -57,7 +57,7 @@ export default function AdsThatPerform() {
               initial={{ x: "100%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: "-100%", opacity: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.1 }}
             >
               {/* Ad Title on Top */}
               <p className="absolute top-4 left-20 text-black text-xl sm:text-lg font-semibold px-4">
