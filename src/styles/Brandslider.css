@@ -1,62 +1,129 @@
-.brand-slider-container {
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
+/* ========================== */
+/* 📱 Mobile-Specific Styles  */
+/* ========================== */
+@media (max-width: 1000px) {
+    .brand-slider-container {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 
-.brand-slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
+    .brand-slider {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        display: flex;
+    }
 
-.slider-track {
-    display: flex;
-    width: max-content;
-    gap: 8px; /* Controls space between logos */
-}
+    /* Wrapper ensures perfect alignment */
+    .slider-wrapper {
+        display: flex;
+        flex-shrink: 0;
+        width: max-content;
+    }
 
-.brand-logo {
-    height: 64px;
-    margin: 0; /* Remove individual margins */
-}
-
-@media (max-width: 768px) {
+    /* Track with logos */
     .slider-track {
-        gap: 4px; /* Smaller gap for tablets */
+        display: flex;
+        flex-shrink: 0;
+        will-change: transform;
     }
-    
+
+    /* Brand logos */
     .brand-logo {
-        height: 56px;
+        height: 100px;
+        margin: 0 1rem;
+        flex-shrink: 0;
     }
+
+    /* Left-to-Right Animation */
+    @keyframes loop-scroll-ltr {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+    }
+
+    /* Right-to-Left Animation */
+    @keyframes loop-scroll-rtl {
+        from { transform: translateX(-50%); }
+        to { transform: translateX(0); }
+    }
+
+    .animate-loop-scroll-ltr {
+        animation: loop-scroll-ltr 12s linear infinite;
+    }
+
+    .animate-loop-scroll-rtl {
+        animation: loop-scroll-rtl 12s linear infinite;
+    }
+
+   
 }
 
-@media (max-width: 480px) {
+/* ============================= */
+/* 💻 Desktop/Laptop: Seamless Opposite Direction Loop */
+/* ============================= */
+@media (min-width: 1001px) {
+    .brand-slider-container {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .brand-slider {
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+    }
+
+    /* Ensure seamless animation by duplicating content */
     .slider-track {
-        gap: 1px; /* Minimal gap for mobile */
+        display: flex;
+        flex-shrink: 0;
+        will-change: transform;
+        min-width: max-content;
     }
-    
+
+    /* Duplicate track to create a smooth infinite loop */
+    .slider-track::after {
+        content: "";
+        display: flex;
+        min-width: 100%;
+    }
+
+    /* Increase Image Size for Desktops */
     .brand-logo {
-        height: 50px;
+        height: 150px;  /* Increased size */
+        margin-right: 3rem;
+        padding-left: 80px;
     }
-}
 
-@keyframes loop-scroll-ltr {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-}
+    /* Left-to-Right Animation (Seamless) */
+    @keyframes seamless-loop-ltr {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+    }
 
-@keyframes loop-scroll-rtl {
-    from { transform: translateX(-50%); }
-    to { transform: translateX(0); }
-}
+    /* Right-to-Left Animation (Seamless) */
+    @keyframes seamless-loop-rtl {
+        from { transform: translateX(-50%); }
+        to { transform: translateX(0); }
+    }
 
-.animate-loop-scroll-ltr {
-    animation: loop-scroll-ltr 12s linear infinite;
-}
+    /* Apply Animations */
+    .animate-loop-scroll-ltr {
+        animation: seamless-loop-ltr 15s linear infinite;
+    }
 
-.animate-loop-scroll-rtl {
-    animation: loop-scroll-rtl 12s linear infinite;
+    .animate-loop-scroll-rtl {
+        animation: seamless-loop-rtl 15s linear infinite;
+    }
+
+   
 }

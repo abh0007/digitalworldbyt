@@ -311,7 +311,7 @@ function Home() {
       {/* Trusted Brands Section */}
       <section className="py-20 bg-black">
   <div className="max-w-8xl mx-auto text-container text-center">
-    <h2 className="text-white text-xl sm:text-xl md:text-3xl lg:text-4xl font-bold mb-6">
+    <h2 className="text-white text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
       Brands Trusted Us
     </h2>
     

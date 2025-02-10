@@ -9,19 +9,23 @@ const BrandSlider = () => {
     <div className="brand-slider-container">
       {/* Left to Right Scrolling */}
       <div className="brand-slider">
-        <div className="slider-track animate-loop-scroll-ltr flex spaxe-x-4">
-          {[...logosLTR, ...logosLTR].map((logo, index) => (
-            <img key={index} src={logo} alt={`Brand ${index + 1}`} className="brand-logo" />
-          ))}
+        <div className="slider-wrapper">
+          <div className="slider-track animate-loop-scroll-ltr">
+            {[...logosLTR, ...logosLTR].map((logo, index) => (
+              <img key={index} src={logo} alt={`Brand ${index + 1}`} className="brand-logo" />
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Right to Left Scrolling */}
       <div className="brand-slider">
-        <div className="slider-track animate-loop-scroll-rtl">
-          {[...logosRTL, ...logosRTL].map((logo, index) => (
-            <img key={index} src={logo} alt={`Brand ${index + 1}`} className="brand-logo" />
-          ))}
+        <div className="slider-wrapper">
+          <div className="slider-track animate-loop-scroll-rtl">
+            {[...logosRTL, ...logosRTL].map((logo, index) => (
+              <img key={index} src={logo} alt={`Brand ${index + 1}`} className="brand-logo" />
+            ))}
+          </div>
         </div>
       </div>
     </div>
