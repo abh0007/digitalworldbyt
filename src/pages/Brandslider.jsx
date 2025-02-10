@@ -9,7 +9,7 @@ const BrandSlider = () => {
     <div className="brand-slider-container">
       {/* Left to Right Scrolling */}
       <div className="brand-slider">
-        <div className="slider-track animate-loop-scroll-ltr">
+        <div className="slider-track animate-loop-scroll-ltr flex spaxe-x-4">
           {[...logosLTR, ...logosLTR].map((logo, index) => (
             <img key={index} src={logo} alt={`Brand ${index + 1}`} className="brand-logo" />
           ))}
