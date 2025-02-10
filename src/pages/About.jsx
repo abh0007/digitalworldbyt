@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import AOS from "aos";
-import "aos/dist/aos.css"; 
+import "aos/dist/aos.css";
 
 // Motion Variants
 const fadeIn = {
@@ -53,131 +53,90 @@ function About() {
   const prevTestimonial = () => {
     setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
-  
 
   return (
     <div className="text-gray-900 bg-transparent font-roboto">
-      {/* Hero Section with Image Background */}
-      <div className="relative h-[70vh] flex items-center justify-center p-10 mt-4 ">
+      {/* Hero Section */}
+      <div className="relative h-[70vh] flex items-center justify-center p-6 sm:p-10 mt-4">
         <img
-          src="/about-hero.jpg" // Replace with your image path
+          src="/about-hero.jpg"
           alt="Background"
           className="absolute inset-0 w-full h-full object-cover opacity-30"
+          loading="lazy"
         />
         <motion.div
-          className="relative z-10 text-center text-white max-w-4xl p-10"
+          className="relative z-10 text-center text-white max-w-4xl p-4 sm:p-10"
           variants={fadeIn}
           initial="hidden"
           animate="visible"
         >
-          <h1 className="text-5xl font-bold mb-4">Welcome to DigitalWorldByT</h1>
-          <p className="mt-2 text-lg">Your partner in innovative digital marketing solutions.</p>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+            Welcome to DigitalWorldByT
+          </h1>
+          <p className="mt-2 text-base sm:text-lg">
+            Your partner in innovative digital marketing solutions.
+          </p>
         </motion.div>
       </div>
 
-      {/* Our Story */}
+      {/* Sections */}
+      {[
+        { title: "Our Story", content: "DigitalWorldByT was founded by Tanya Narula, a passionate digital marketer dedicated to helping businesses thrive online. With years of experience, we’ve grown into a trusted partner for brands worldwide." },
+        { title: "Our Mission & Vision", content: "Our mission is to craft impactful strategies that elevate brands. Our vision is to be a leader in innovative digital solutions, driving growth and success for our clients." },
+        { title: "Our Goals", content: "Deliver high-quality marketing solutions. Empower businesses to succeed digitally. Stay ahead of industry trends." },
+        { title: "Our Values & Culture", content: "Integrity, innovation, and collaboration define us. We strive for excellence and foster a growth mindset within our team and clients." },
+      ].map((section, i) => (
+        <motion.section
+          key={i}
+          className={`py-16 px-6 sm:px-10 text-center ${i % 2 === 0 ? "bg-white" : "bg-gray-100"}`}
+          variants={slideIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold text-black">{section.title}</h2>
+          <p className="mt-4 text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">{section.content}</p>
+        </motion.section>
+      ))}
+
+      {/* Logo Slider */}
       <motion.section
-        className="py-20 px-10 bg-white text-center"
-        variants={slideIn}
+        className="py-16 px-6 bg-gray-100 text-center"
+        variants={fadeIn}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl font-bold text-black">Our Story</h2>
-        <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
-          DigitalWorldByT was founded by Tanya Narula, a passionate digital marketer dedicated to helping businesses thrive online. With years of experience, we’ve grown into a trusted partner for brands worldwide.
-        </p>
+        <h2 className="text-3xl sm:text-4xl font-bold text-black">
+          Trusted by Leading Brands
+        </h2>
+        <motion.div
+          className="mt-8 flex space-x-10 overflow-x-auto cursor-grab p-4 lg:ml-100 lg:space-x-20"
+          drag="x"
+          dragConstraints={{ left: -500, right: 0 }}
+        >
+          {["/logo20.jpg", "/logo7.jpg", "/logo8.jpg", "/logo9.jpg", "/logo10.jpg"].map((logo, i) => (
+            <img key={i} src={logo} alt={`Client ${i + 1}`} className="h-24 sm:h-40 flex-shrink-0" loading="lazy" />
+          ))}
+        </motion.div>
       </motion.section>
 
-      {/* Mission & Vision */}
-      <motion.section
-        className="py-20 px-10 bg-gray-100 text-center"
-        variants={slideIn}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        <h2 className="text-4xl font-bold text-black">Our Mission & Vision</h2>
-        <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
-          Our mission is to craft impactful strategies that elevate brands. Our vision is to be a leader in innovative digital solutions, driving growth and success for our clients.
-        </p>
-      </motion.section>
-
-      {/* Goals */}
-      <motion.section
-        className="py-20 px-10 bg-white text-center"
-        variants={slideIn}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        <h2 className="text-4xl font-bold text-black">Our Goals</h2>
-        <ul className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto list-disc list-inside">
-          <li>Deliver high-quality marketing solutions.</li>
-          <li>Empower businesses to succeed digitally.</li>
-          <li>Stay ahead of industry trends.</li>
-        </ul>
-      </motion.section>
-
-      <motion.section
-  className="py-20 px-6 sm:px-10 bg-gray-100 text-center"
-  variants={fadeIn}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
->
-  <h2 className="text-3xl sm:text-4xl font-bold text-black">
-    Trusted by Leading Brands
-  </h2>
-
-  {/* Draggable Logo Slider */}
-  <div className="relative overflow-hidden mt-8">
-    <motion.div
-      className="flex flex-nowrap gap-8 sm:gap-12 cursor-grab"
-      drag="x"
-      dragConstraints={{ left: -800, right: 0 }} // Ensures all logos are draggable
-    >
-      <img src="/logo20.jpg" alt="Client 1" className="h-24 sm:h-32 md:h-40 min-w-[100px] sm:min-w-[120px] md:min-w-[140px]" />
-      <img src="/logo7.jpg" alt="Client 2" className="h-24 sm:h-32 md:h-40 min-w-[100px] sm:min-w-[120px] md:min-w-[140px]" />
-      <img src="/logo8.jpg" alt="Client 3" className="h-24 sm:h-32 md:h-40 min-w-[100px] sm:min-w-[120px] md:min-w-[140px]" />
-      <img src="/logo9.jpg" alt="Client 4" className="h-24 sm:h-32 md:h-40 min-w-[100px] sm:min-w-[120px] md:min-w-[140px]" />
-      <img src="/logo10.jpg" alt="Client 5" className="h-24 sm:h-32 md:h-40 min-w-[100px] sm:min-w-[120px] md:min-w-[140px]" />
-      <img src="/logo11.jpg" alt="Client 6" className="h-24 sm:h-32 md:h-40 min-w-[100px] sm:min-w-[120px] md:min-w-[140px]" />
-    </motion.div>
-  </div>
-</motion.section>
-
-      {/* Company Values & Culture */}
-      <motion.section
-        className="py-20 px-10 bg-white text-center"
-        variants={slideIn}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        <h2 className="text-4xl font-bold text-black">Our Values & Culture</h2>
-        <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
-          Integrity, innovation, and collaboration define us. We strive for excellence and foster a growth mindset within our team and clients.
-        </p>
-      </motion.section>
-
-      {/* Testimonials Section */}
-      <section className="bg-gray-100 py-16">
-        <div className="max-w-6xl mx-auto flex flex-col items-center text-center gap-6">
-          <h2 className="text-4xl font-bold text-gray-900">What Our Clients Say</h2>
-          <p className="text-lg text-gray-700">Real feedback from businesses that trust us.</p>
-
-          {/* Testimonial Slider */}
-          <div className="relative w-full max-w-2xl p-6 bg-white rounded-xl shadow-lg">
-            {/* Previous Button */}
+      {/* Testimonials */}
+      <section className="bg-gray-100 py-16 px-6">
+        <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            What Our Clients Say
+          </h2>
+          <div className="relative w-full max-w-lg p-6 bg-white rounded-xl shadow-lg">
+            {/* Navigation Buttons */}
             <button
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-transparent text-black p-2 rounded-full shadow-lg"
+              className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full shadow-md"
               onClick={prevTestimonial}
+              aria-label="Previous Testimonial"
             >
               <ChevronLeft size={24} />
             </button>
 
-            {/* Testimonial Content */}
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
@@ -187,36 +146,27 @@ function About() {
                 exit={{ x: "-100%", opacity: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                {/* Company Logo */}
-                <img src={testimonials[index].logo} alt={testimonials[index].company} className="h-16 w-auto mb-4" />
-
-                {/* Review Text */}
-                <p className="text-xl text-gray-800 font-medium">&quot;{testimonials[index].review}&quot;</p>
-
-                {/* Client Name */}
-                <p className="text-gray-600 mt-2 font-semibold">- {testimonials[index].name}, {testimonials[index].company}</p>
-
-                {/* Star Rating */}
+                <img src={testimonials[index].logo} alt={testimonials[index].company} className="h-12 sm:h-16 mb-4" />
+                <p className="text-lg sm:text-xl text-gray-800 font-medium">
+                  &quot;{testimonials[index].review}&quot;
+                </p>
+                <p className="text-gray-600 mt-2 font-semibold">
+                  - {testimonials[index].name}, {testimonials[index].company}
+                </p>
                 <div className="flex justify-center mt-4">
-                  {Array.from({ length: testimonials[index].rating }, (_, i) => (
+                  {Array(testimonials[index].rating).fill().map((_, i) => (
                     <Star key={i} size={24} className="text-yellow-400 fill-yellow-400" />
                   ))}
                 </div>
               </motion.div>
             </AnimatePresence>
 
-            {/* Next Button */}
-            <button
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-transparent text-black p-2 rounded-full shadow-lg"
-              onClick={nextTestimonial}
-            >
+            <button className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full shadow-md" onClick={nextTestimonial} aria-label="Next Testimonial">
               <ChevronRight size={24} />
             </button>
           </div>
         </div>
       </section>
-
-      
     </div>
   );
 }
