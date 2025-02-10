@@ -124,7 +124,7 @@ function Home() {
     {/* Button and Link */}
     <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:ml-20">
     <a
-  href="https://wa.me/1234567890" // Replace with your actual WhatsApp number
+  href="https://wa.me/918887813257" // Replace with your actual WhatsApp number
   target="_blank"
   rel="noopener noreferrer"
   className="px-6 py-3 bg-white border-2 border-white text-black rounded-lg shadow-lg hover:bg-black hover:text-white transition duration-300"
@@ -316,12 +316,12 @@ function Home() {
     
     {/* Brand Slider 1 (Left to Right) */}
     <div className="brand-slider flex overflow-hidden">
-      <div className="animate-loop-scroll-ltr flex gap-15">
-        {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg"].map((logo, index) => (
+      <div className="animate-loop-scroll-ltr flex gap-10">
+        {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg","logo25.jpg"].map((logo, index) => (
           <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
         ))}
       </div>
-      <div className="animate-loop-scroll-ltr flex gap-15" aria-hidden="true">
+      <div className="animate-loop-scroll-ltr flex gap-10" aria-hidden="true">
         {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg"].map((logo, index) => (
           <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
         ))}
@@ -330,12 +330,12 @@ function Home() {
 
     {/* Brand Slider 2 (Right to Left) */}
     <div className="brand-slider2 flex overflow-hidden mt-10">
-      <div className="animate-loop-scroll-rtl flex gap-15">
+      <div className="animate-loop-scroll-rtl flex gap-10">
         {["logo20.jpg", "logo21.jpg", "logo22.jpg", "logo23.jpg", "logo13.jpg", "logo24.jpg"].map((logo, index) => (
           <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
         ))}
       </div>
-      <div className="animate-loop-scroll-rtl flex gap-15" aria-hidden="true">
+      <div className="animate-loop-scroll-rtl flex gap-10" aria-hidden="true">
         {["logo20.jpg", "logo21.jpg", "logo22.jpg", "logo23.jpg", "logo13.jpg", "logo24.jpg"].map((logo, index) => (
           <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
         ))}

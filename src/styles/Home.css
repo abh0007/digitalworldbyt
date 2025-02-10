@@ -19,13 +19,13 @@
 .animate-loop-scroll-ltr {
   display: flex;
   white-space: nowrap;
-  animation: loop-scroll-ltr 5s linear infinite;
+  animation: loop-scroll-ltr 10s linear infinite;
 }
 
 .animate-loop-scroll-rtl {
   display: flex;
   white-space: nowrap;
-  animation: loop-scroll-rtl 5s linear infinite;
+  animation: loop-scroll-rtl 10s linear infinite;
 }
 
 .brand-slider, .brand-slider2 {
