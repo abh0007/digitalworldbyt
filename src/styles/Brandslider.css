@@ -1,0 +1,69 @@
+.brand-slider-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Base styles for the brand slider */
+  .brand-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  /* Ensures smooth scrolling without gaps */
+  .slider-track {
+    display: flex;
+    width: max-content;
+  }
+  
+  /* Logo styles */
+  .brand-logo {
+    height: 64px;
+    margin: 0 10px; /* Default gap between logos */
+  }
+  
+  @media (max-width: 768px) {
+    .brand-logo {
+      height: 56px;
+      margin: 0 6px; /* Reduce gap for tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .brand-logo {
+      height: 50px;
+      margin: 0 4px; /* Reduce gap even more for mobile */
+    }
+  }
+  
+  /* Smooth infinite scrolling */
+  @keyframes loop-scroll-ltr {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @keyframes loop-scroll-rtl {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-loop-scroll-ltr {
+    animation: loop-scroll-ltr 15s linear infinite;
+  }
+  
+  .animate-loop-scroll-rtl {
+    animation: loop-scroll-rtl 15s linear infinite;
+  }
+  

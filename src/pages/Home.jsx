@@ -5,6 +5,7 @@ import '../styles/Home.css';
 import Footer from "../components/Footer"; // Ensure correct import path
 import Ads from "./Ads";
 import Testimonials from "./Testemonials";
+import BrandSlider from "./Brandslider";
 
 
 function Home() {
@@ -315,35 +316,11 @@ function Home() {
     </h2>
     
     {/* Brand Slider 1 (Left to Right) */}
-    <div className="brand-slider flex overflow-hidden">
-      <div className="animate-loop-scroll-ltr flex gap-10">
-        {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg","logo25.jpg"].map((logo, index) => (
-          <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
-        ))}
-      </div>
-      <div className="animate-loop-scroll-ltr flex gap-10" aria-hidden="true">
-        {["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg"].map((logo, index) => (
-          <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
-        ))}
-      </div>
-    </div>
-
-    {/* Brand Slider 2 (Right to Left) */}
-    <div className="brand-slider2 flex overflow-hidden mt-10">
-      <div className="animate-loop-scroll-rtl flex gap-10">
-        {["logo20.jpg", "logo21.jpg", "logo22.jpg", "logo23.jpg", "logo13.jpg", "logo24.jpg"].map((logo, index) => (
-          <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
-        ))}
-      </div>
-      <div className="animate-loop-scroll-rtl flex gap-10" aria-hidden="true">
-        {["logo20.jpg", "logo21.jpg", "logo22.jpg", "logo23.jpg", "logo13.jpg", "logo24.jpg"].map((logo, index) => (
-          <img key={index} src={logo} alt={`Brand ${index + 1}`} className="h-16" />
-        ))}
-      </div>
-    </div>
+    <BrandSlider/>
 
   </div>
 </section>
+
 <Testimonials/>
 
       <section className="linkedin p-4  bg-white">
