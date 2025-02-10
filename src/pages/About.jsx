@@ -42,6 +42,41 @@ const testimonials = [
     rating: 5,
   },
 ];
+const stats = [
+  { 
+    icon: <img src="/logo7.jpg" className="w-30 h-30" alt="Countries Served" />, 
+    
+  },
+  { 
+    icon: <img src="/logo8.jpg" className="w-30 h-30" alt="Years of Experience" />, 
+   
+  },
+  { 
+    icon: <img src="/logo10.jpg" className="w-30 h-30" alt="Successful Projects" />, 
+   
+  },
+  { 
+    icon: <img src="/logo11.jpg" className="w-30 h-30" alt="Happy Clients" />, 
+   
+  },
+  { 
+    icon: <img src="/logo12.jpg" className="w-30 h-30" alt="Industries Covered" />, 
+    
+  },
+  { 
+    icon: <img src="/logo13.jpg" className="w-30 h-30" alt="Successful Projects" />, 
+   
+  },
+  { 
+    icon: <img src="/logo14.jpg" className="w-30 h-30" alt="Successful Projects" />, 
+   
+  },
+  { 
+    icon: <img src="/logo20.jpg" className="w-30 h-30" alt="Successful Projects" />, 
+   
+  }
+];
+
 
 function About() {
   const [index, setIndex] = useState(0);
@@ -101,24 +136,34 @@ function About() {
 
       {/* Logo Slider */}
       <motion.section
-        className="py-16 px-6 bg-gray-100 text-center"
+        className="py-16 px-6 bg-black text-center"
         variants={fadeIn}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl sm:text-4xl font-bold text-black">
+        <h2 className="text-3xl sm:text-4xl font-bold text-white">
           Trusted by Leading Brands
         </h2>
-        <motion.div
-          className="mt-8 flex space-x-10 overflow-x-auto cursor-grab p-4 lg:ml-100 lg:space-x-20"
-          drag="x"
-          dragConstraints={{ left: -500, right: 0 }}
-        >
-          {["/logo20.jpg", "/logo7.jpg", "/logo8.jpg", "/logo9.jpg", "/logo10.jpg"].map((logo, i) => (
-            <img key={i} src={logo} alt={`Client ${i + 1}`} className="h-24 sm:h-40 flex-shrink-0" loading="lazy" />
-          ))}
-        </motion.div>
+        <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-4 py-10">
+      {stats.map((stat, index) => (
+        <div key={index} className="flex flex-col items-center">
+          {stat.icon}
+         
+        </div>
+      ))}
+    </div>
+
+    {/* Mobile Scrollable View */}
+    <div className="md:hidden overflow-x-auto flex space-x-8 w-full px-4  scrollbar-hide">
+      {stats.map((stat, index) => (
+        <div key={index} className="flex flex-col items-center min-w-[150px]">
+          {stat.icon}
+          <span className="text-3xl font-bold mt-4">{stat.value}</span>
+          <span className="text-base text-gray-300">{stat.label}</span>
+        </div>
+      ))}
+    </div>
       </motion.section>
 
       {/* Testimonials */}
