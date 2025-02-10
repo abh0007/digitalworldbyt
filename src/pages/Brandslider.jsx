@@ -1,5 +1,5 @@
 import React from "react";
-import "./BrandSlider.css"; // Import the CSS file
+import "../styles/Brandslider.css"; // Import the CSS file
 
 const BrandSlider = () => {
   const logosLTR = ["logo7.jpg", "logo8.jpg", "logo9.jpg", "logo10.jpg", "logo11.jpg", "logo12.jpg", "logo25.jpg"];
