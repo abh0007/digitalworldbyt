@@ -155,4 +155,19 @@
     .animate-loop-scroll-rtl {
         -webkit-animation: seamless-iphone-rtl 12s linear infinite;
     }
+    .slider-track {
+        display: flex;
+        flex-shrink: 0;
+        will-change: transform;
+        min-width: max-content;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        perspective: 1000;
+    }
+    
+
+
 }
