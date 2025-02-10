@@ -166,7 +166,7 @@ export default function Services() {
           goals.
         </p>
         <a
-  href="https://wa.me/1234567890" // Replace with your actual WhatsApp number
+  href="https://wa.me/91887813257" // Replace with your actual WhatsApp number
   target="_blank"
   rel="noopener noreferrer"
   className="mt-6 inline-block px-6 py-3 bg-white text-black hover:bg-blue-700 hover:text-white transition duration-300"
