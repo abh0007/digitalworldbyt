@@ -7,7 +7,6 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./ScrollToTop"
 import Ads from "./pages/Ads";
-import Abhi from "./pages/Abhi";
 import Testimonials from "./pages/Testemonials";
 import BrandSlider from "./pages/Brandslider";
 import "@fontsource/roboto"; // Default weight (400)
@@ -26,7 +25,6 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/Ads" element={<Ads/>} />
-        <Route path="/Abhi" element={<Abhi/>} />
         <Route path="/Testemonials" element={<Abhi/>} />
         <Route path="/Brandslider" element={<BrandSlider/>} />
         
