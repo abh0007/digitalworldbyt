@@ -72,6 +72,16 @@ function Navbar() {
             </Link>
           </li>
           <li>
+            <Link
+              to="/blog"
+              className={`${
+                isActive("/blog") ? "text-blue-500 font-semibold" : "hover:text-blue-400"
+              }`}
+            >
+              Blog
+            </Link>
+          </li>
+          <li>
   <a
     href="https://wa.me/918887813257" // Replace with your actual WhatsApp number
     target="_blank"
@@ -127,8 +137,19 @@ function Navbar() {
               </Link>
             </li>
             <li>
+              <Link
+                to="/blog"
+                className={`${
+                  isActive("/blog") ? "text-blue-500 font-semibold" : "hover:text-blue-400"
+                }`}
+                onClick={toggleMenu}
+              >
+                Blog
+              </Link>
+            </li>
+            <li>
             <a
-    href="https://wa.me/918887813257" // Replace with your actual WhatsApp number
+    href="https://wa.me/918887813257" 
     target="_blank"
     rel="noopener noreferrer"
     className={`px-6 border-2 py-2 rounded-lg font-semibold transition duration-300 ${

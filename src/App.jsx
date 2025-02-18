@@ -9,6 +9,7 @@ import ScrollToTop from "./ScrollToTop"
 import Ads from "./pages/Ads";
 import Abhi from "./pages/Abhi";
 import Testimonials from "./pages/Testemonials";
+import Blog from "./pages/Blog";
 import BrandSlider from "./pages/Brandslider";
 import "@fontsource/roboto"; // Default weight (400)
 import "@fontsource/roboto/300.css"; // Light
@@ -29,6 +30,7 @@ function App() {
         <Route path="/Abhi" element={<Abhi/>} />
         <Route path="/Testemonials" element={<Abhi/>} />
         <Route path="/Brandslider" element={<BrandSlider/>} />
+        <Route path="/Blog" element={<Blog />} />
         
       </Routes>
       <Footer />

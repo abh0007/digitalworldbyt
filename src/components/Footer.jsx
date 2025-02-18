@@ -25,9 +25,9 @@ const ContactUs = () => {
     setStatus("Sending...");
 
     // EmailJS credentials
-    const serviceID = "service_dtpjvzf";
-    const templateID = "template_c87vdj7";
-    const publicKey = "Piekq47LlwdNXkKbE";
+    const serviceID = "service_kr7xpel";
+    const templateID = "template_ibzrgia";
+    const publicKey = "VbcGWVS_rw9c5U813";
 
     // Ensure the template params match your EmailJS template
     const templateParams = {
@@ -70,7 +70,18 @@ const ContactUs = () => {
             <li><Link to="/" className="hover:text-blue-500">Home</Link></li>
             <li><Link to="/about" className="hover:text-blue-500">About</Link></li>
             <li><Link to="/services" className="hover:text-blue-500">Services</Link></li>
-            <li><Link to="/contact" className="hover:text-blue-500">Contact</Link></li>
+            <li>
+  <a 
+    href="https://wa.me/918887813257" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="hover:text-blue-500"
+  >
+    Contact
+  </a>
+</li>
+
+            <li><Link to="/blog" className="hover:text-blue-500">Blog</Link></li>
           </ul>
         </div>
 
