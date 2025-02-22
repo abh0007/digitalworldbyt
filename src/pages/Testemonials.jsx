@@ -41,8 +41,8 @@ export default function Testimonials() {
     <section className="bg-black py-16">
       <div className="max-w-6xl mx-auto flex flex-col items-center text-center gap-6">
         {/* Section Title */}
-        <h2 className="text-6xl font-bold text-white">What Our Clients Say</h2>
-        <p className="text-2xl text-white">Real feedback from businesses that trust us.</p>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">What Our Clients Say</h2>
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white">Real feedback from businesses that trust us.</p>
 
         {/* Testimonial Slider */}
         <div className="relative w-full max-w-2xl p-6 bg-white rounded-xl shadow-lg">

@@ -219,7 +219,7 @@ function Home() {
 <section className="bg-black text-white py-10">
   <div className="max-w-7xl mx-auto text-center px-0">
     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">Our Experience</h2>
-    <p className="text-2xl mb-12">
+    <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-12">
       Empowering businesses with our expertise across multiple industries and countries.
     </p>
 
@@ -278,7 +278,7 @@ function Home() {
     </motion.h2>
 
     <motion.p
-      className="mt-4 text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto"
+      className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 max-w-2xl mx-auto"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.2 }}
