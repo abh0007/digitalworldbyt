@@ -150,7 +150,7 @@ function Home() {
 
 <section className="py-12 bg-white">
       <div className="max-w-8xl mx-auto text-center">
-        <h2 className="text-6xl sm:text-3xl md:text-4xl font-bold mb-12  text-black">What We Offer</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-12  text-black">What We Offer</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-12 px-6 text-black">
           {services.map((service, index) => (
             <Link
