@@ -6,6 +6,8 @@ import Footer from "../components/Footer"; // Ensure correct import path
 import Ads from "./Ads";
 import Testimonials from "./Testemonials";
 import BrandSlider from "./Brandslider";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 
 function Home() {
@@ -351,12 +353,12 @@ function Home() {
      {/* Call to Action */}
      <section
         className="py-20 bg-black text-white text-center"
-        data-aos="fade-up"
+        
       >
-        <h3 className="text-4xl font-bold" data-aos="fade-up">
+        <h3 className="text-4xl font-bold" >
           Ready to grow your business?
         </h3>
-        <p className="mt-4 text-lg" data-aos="fade-up" data-aos-delay="100">
+        <p className="mt-4 text-lg" >
           Contact us today to discuss how we can help you achieve your marketing
           goals.
         </p>
@@ -365,8 +367,7 @@ function Home() {
   target="_blank"
   rel="noopener noreferrer"
   className="mt-6 inline-block px-6 py-3 bg-white text-black hover:bg-blue-700 hover:text-white transition duration-300"
-  data-aos="fade-up"
-  data-aos-delay="200"
+  
 >
   Get in Touch
 </a>
