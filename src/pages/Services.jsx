@@ -78,6 +78,46 @@ export default function Services() {
         </div>
       </div>
 
+      
+
+      {/* Services List Section */}
+      <section className="bg-black py-12 px-4">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-6">
+          {/* Left Side - Text & Dropdown */}
+          <div className="w-full md:w-1/2">
+            <h2 className="text-6xl font-bold text-white mb-6">
+              What We Offer
+            </h2>
+            <div className="space-y-4">
+              {services.map((service, index) => (
+                <div key={index} className="border-b border-white">
+                  <button
+                    onClick={() => toggleDropdown(index)}
+                    className="w-full flex justify-between items-center py-4 text-3xl font-semibold text-white focus:outline-none"
+                  >
+                    {service.title}
+                    <span>{openIndex === index ? "▲" : "▼"}</span>
+                  </button>
+                  {openIndex === index && (
+                    <p className="text-white text-xl pb-4 px-2">
+                      {service.description}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Side - Image */}
+          <div className="w-full md:w-1/2 lg:h-160 flex justify-center mt-5">
+            <img
+              src="/serviceright.png"
+              alt="Services"
+              className="w-full  shadow-lg object-cover"
+            />
+          </div>
+        </div>
+      </section>
       {/* About Section */}
       <section className="bg-black text-white py-16" data-aos="fade-up">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-6">
@@ -110,45 +150,6 @@ export default function Services() {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Services List Section */}
-      <section className="bg-black py-12 px-4">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-6">
-          {/* Left Side - Text & Dropdown */}
-          <div className="w-full md:w-1/2">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              What We Offer
-            </h2>
-            <div className="space-y-4">
-              {services.map((service, index) => (
-                <div key={index} className="border-b border-white">
-                  <button
-                    onClick={() => toggleDropdown(index)}
-                    className="w-full flex justify-between items-center py-4 text-lg font-semibold text-white focus:outline-none"
-                  >
-                    {service.title}
-                    <span>{openIndex === index ? "▲" : "▼"}</span>
-                  </button>
-                  {openIndex === index && (
-                    <p className="text-white text-sm pb-4 px-2">
-                      {service.description}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Side - Image */}
-          <div className="w-full md:w-1/2 lg:h-150 flex justify-center">
-            <img
-              src="/serviceright.png"
-              alt="Services"
-              className="w-full  shadow-lg object-cover"
-            />
           </div>
         </div>
       </section>

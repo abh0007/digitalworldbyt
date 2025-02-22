@@ -148,7 +148,7 @@ function Home() {
 
 <section className="py-12 bg-white">
       <div className="max-w-8xl mx-auto text-center">
-        <h2 className="text-5xl font-bold mb-8 text-black">What We Offer</h2>
+        <h2 className="text-6xl font-bold mb-12  text-black">What We Offer</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-12 px-6 text-black">
           {services.map((service, index) => (
             <Link
@@ -214,10 +214,10 @@ function Home() {
   </div>
 </section>
 
-<section className="bg-black text-white py-16">
+<section className="bg-black text-white py-10">
   <div className="max-w-7xl mx-auto text-center px-0">
-    <h2 className="text-4xl font-bold mb-6 text-white">Our Experience</h2>
-    <p className="text-lg mb-12">
+    <h2 className="text-6xl font-bold mb-6 text-white">Our Experience</h2>
+    <p className="text-2xl mb-12">
       Empowering businesses with our expertise across multiple industries and countries.
     </p>
 
@@ -250,12 +250,24 @@ function Home() {
       
     
     <Ads/>
+     {/* Trusted Brands Section */}
+     <section className="py-10 bg-black">
+  <div className="max-w-8xl mx-auto text-container text-center">
+    <h2 className="text-white text-2xl sm:text-2xl md:text-3xl lg:text-6xl font-bold mb-12">
+      Brands Trusted Us
+    </h2>
+    
+    {/* Brand Slider 1 (Left to Right) */}
+    <BrandSlider/>
+
+  </div>
+</section>
     
      {/* How We Can Help You Section */}
      <section className="py-20 bg-gray-50">
   <div className="max-w-6xl mx-auto text-center">
     <motion.h2
-      className="text-3xl sm:text-4xl font-bold text-gray-800"
+      className="text-3xl lg:text-6xl sm:text-4xl font-bold text-gray-800"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -273,6 +285,7 @@ function Home() {
       Our mission is to deliver innovative solutions that elevate brands and connect them with their target audiences.
     </motion.p>
   </div>
+  
  
 
   {/* Services Grid with Border Net Structure */}
@@ -308,23 +321,12 @@ function Home() {
 
 
 
-      {/* Trusted Brands Section */}
-      <section className="py-20 bg-black">
-  <div className="max-w-8xl mx-auto text-container text-center">
-    <h2 className="text-white text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
-      Brands Trusted Us
-    </h2>
-    
-    {/* Brand Slider 1 (Left to Right) */}
-    <BrandSlider/>
-
-  </div>
-</section>
+     
 
 <Testimonials/>
 
-      <section className="linkedin p-4  bg-white">
-      <h2 className="text-black text-center p-5 text-xl sm:text-xl md:text-3xl lg:text-4xl font-bold  mb-6">Follow us On Linkedin</h2>
+      <section className="linkedin p-4  bg-gray-100">
+      <h2 className="text-black text-center p-5 text-xl sm:text-xl md:text-3xl lg:text-6xl font-bold  mb-6">Follow us On Linkedin</h2>
       {/* Mobile: Horizontal scroll | Desktop: Stays same */}
       <div className="flex flex-nowrap lg:flex-row gap-6 overflow-x-auto lg:overflow-visible snap-x snap-mandatory lg:px-40 scrollbar-hide">
         {posts.map((post, index) => (
@@ -343,9 +345,33 @@ function Home() {
             ></iframe>
           </div>
         ))}
+        
       </div>
     </section>
-    
+     {/* Call to Action */}
+     <section
+        className="py-20 bg-black text-white text-center"
+        data-aos="fade-up"
+      >
+        <h3 className="text-4xl font-bold" data-aos="fade-up">
+          Ready to grow your business?
+        </h3>
+        <p className="mt-4 text-lg" data-aos="fade-up" data-aos-delay="100">
+          Contact us today to discuss how we can help you achieve your marketing
+          goals.
+        </p>
+        <a
+  href="https://wa.me/918887813257" // Replace with your actual WhatsApp number
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-6 inline-block px-6 py-3 bg-white text-black hover:bg-blue-700 hover:text-white transition duration-300"
+  data-aos="fade-up"
+  data-aos-delay="200"
+>
+  Get in Touch
+</a>
+
+      </section>
       <Footer />
       
 
