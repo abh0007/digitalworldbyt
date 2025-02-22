@@ -218,7 +218,7 @@ function Home() {
 
 <section className="bg-black text-white py-10">
   <div className="max-w-7xl mx-auto text-center px-0">
-    <h2 className="text-6xl font-bold mb-6 text-white">Our Experience</h2>
+    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">Our Experience</h2>
     <p className="text-2xl mb-12">
       Empowering businesses with our expertise across multiple industries and countries.
     </p>
@@ -255,7 +255,7 @@ function Home() {
      {/* Trusted Brands Section */}
      <section className="py-10 bg-black">
   <div className="max-w-8xl mx-auto text-container text-center">
-    <h2 className="text-white text-2xl sm:text-2xl md:text-3xl lg:text-6xl font-bold mb-12">
+    <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-12">
       Brands Trusted Us
     </h2>
     
@@ -269,7 +269,7 @@ function Home() {
      <section className="py-20 bg-gray-50">
   <div className="max-w-6xl mx-auto text-center">
     <motion.h2
-      className="text-3xl lg:text-6xl sm:text-4xl font-bold text-gray-800"
+      className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -328,7 +328,7 @@ function Home() {
 <Testimonials/>
 
       <section className="linkedin p-4  bg-gray-100">
-      <h2 className="text-black text-center p-5 text-xl sm:text-xl md:text-3xl lg:text-6xl font-bold  mb-6">Follow us On Linkedin</h2>
+      <h2 className="text-black text-center p-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold  mb-6">Follow us On Linkedin</h2>
       {/* Mobile: Horizontal scroll | Desktop: Stays same */}
       <div className="flex flex-nowrap lg:flex-row gap-6 overflow-x-auto lg:overflow-visible snap-x snap-mandatory lg:px-40 scrollbar-hide">
         {posts.map((post, index) => (
