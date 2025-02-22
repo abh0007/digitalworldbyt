@@ -34,7 +34,7 @@ export default function AdsThatPerform() {
       <div className="max-w-6xl mx-auto flex flex-col items-center gap-6">
         {/* Title and Description */}
         <div className="text-center">
-          <h2 className="text-6xl font-bold text-gray-900">Ads That Perform</h2>
+          <h2 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-bold text-gray-900">Ads That Perform</h2>
           <p className="text-2xl text-gray-700 mt-2">
             Our data-driven ad campaigns ensure maximum engagement and conversions.
           </p>
