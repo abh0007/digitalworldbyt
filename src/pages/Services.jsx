@@ -85,7 +85,7 @@ export default function Services() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-6">
           {/* Left Side - Text & Dropdown */}
           <div className="w-full md:w-1/2">
-            <h2 className="text-6xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               What We Offer
             </h2>
             <div className="space-y-4">
@@ -93,7 +93,7 @@ export default function Services() {
                 <div key={index} className="border-b border-white">
                   <button
                     onClick={() => toggleDropdown(index)}
-                    className="w-full flex justify-between items-center py-4 text-3xl font-semibold text-white focus:outline-none"
+                    className="w-full flex justify-between items-center py-4 text-base sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white focus:outline-none"
                   >
                     {service.title}
                     <span>{openIndex === index ? "▲" : "▼"}</span>

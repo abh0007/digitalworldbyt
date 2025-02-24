@@ -18,7 +18,7 @@ import "@fontsource/roboto/700.css"; // Bold
 
 function App() {
   return (
-    <div className="bg-black text-white">
+    <div className=" text-white">
       <ScrollToTop />
       <Navbar />
       <Routes>

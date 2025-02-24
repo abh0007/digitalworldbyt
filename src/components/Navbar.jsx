@@ -101,7 +101,7 @@ function Navbar() {
 
       {/* Dropdown Menu for Small Screens */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white shadow-lg absolute top-16 left-0 w-full">
+        <div className="lg:hidden bg-white shadow-lg absolute top-22 left-0 w-full">
           <ul className="flex flex-col gap-4 p-4">
             <li>
               <Link
@@ -147,7 +147,7 @@ function Navbar() {
                 Blog
               </Link>
             </li>
-            <li>
+            <li className="mt-2">
             <a
     href="https://wa.me/918887813257" 
     target="_blank"
