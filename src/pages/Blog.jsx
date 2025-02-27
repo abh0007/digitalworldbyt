@@ -45,29 +45,31 @@ const Blog = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-40">
-      <div className="text-center mb-12">
+    <div className="max-w-7xl mx-auto px-4 py-40 relative">
+      {/* Background Image */}
+      <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?digital,technology')" }}></div>
+      
+      <div className="relative text-center mb-12">
         <h1 className="text-5xl text-black font-bold">Welcome to Our Blog</h1>
         <p className="text-gray-500 mt-2">Stay updated with the latest trends in digital marketing.</p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-3 gap-8 relative">
         {blogPosts.map((post, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden relative">
-            {post.imageurl && <img className="w-full h-60 object-cover" src={post.imageurl} alt={post.title} />}
+          <div
+            key={index}
+            className="bg-white overflow-hidden relative cursor-pointer p-4 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+            onClick={() => openModal(post)}
+          >
+            {post.imageurl && <img className="w-full h-60 object-cover " src={post.imageurl} alt={post.title} />}
             <div className="p-2">
               <h2 className="text-xl text-black font-semibold mb-2">{post.title}</h2>
               <p className="text-gray-600 text-sm mb-4">{post.content}</p>
+              <hr className="my-2 border-gray-300" />
               <div className="flex justify-between items-center text-gray-500 text-sm">
                 <span>By {post.author}</span>
                 <span>{post.date}</span>
               </div>
-              <button
-                className="mt-4 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700"
-                onClick={() => openModal(post)}
-              >
-                Read More
-              </button>
             </div>
           </div>
         ))}
@@ -78,19 +80,19 @@ const Blog = () => {
         <div className="fixed inset-0 flex items-center justify-center z-50">
           {/* Background Blur */}
           <div
-            className="absolute inset-0 bg-transparent bg-opacity-30 backdrop-blur-md"
+            className="absolute inset-0 bg-transparent bg-opacity-50 backdrop-blur-xs"
             onClick={closeModal}
           ></div>
 
           {/* Modal Content */}
-          <div className="relative bg-white rounded-xl shadow-2xl w-11/12 md:w-2/3 lg:w-1/2 max-h-[90vh] overflow-y-auto p-6">
+          <div className="relative bg-white  w-11/12 md:w-2/3 lg:w-1/2 max-h-[90vh] overflow-y-auto p-3">
             <button className="absolute top-4 right-4 text-gray-600 text-2xl" onClick={closeModal}>
               &times;
             </button>
             {selectedPost.imageurl && (
-              <img className="w-full h-64 object-cover rounded-t-lg" src={selectedPost.imageurl} alt={selectedPost.title} />
+              <img className="w-full h-64 object-cover " src={selectedPost.imageurl} alt={selectedPost.title} />
             )}
-            <h2 className="text-3xl font-bold mt-4">{selectedPost.title}</h2>
+            <h2 className="text-3xl text-black font-bold mt-2">{selectedPost.title}</h2>
             <p className="text-gray-700 mt-4">{selectedPost.fullcontent}</p>
           </div>
         </div>
