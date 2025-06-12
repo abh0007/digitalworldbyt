@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./ScrollToTop"
 import Ads from "./pages/Ads";
-import Abhi from "./pages/Abhi";
+import ServiceSection from "./pages/ServiceSection";
 import Testimonials from "./pages/Testemonials";
 import Blog from "./pages/Blog";
 import BrandSlider from "./pages/Brandslider";
@@ -27,8 +27,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/Ads" element={<Ads/>} />
-        <Route path="/Abhi" element={<Abhi/>} />
-        <Route path="/Testemonials" element={<Abhi/>} />
+        <Route path="/ServiceSection" element={<ServiceSection/>} />
+        <Route path="/Testemonials" element={<ServiceSection/>} />
         <Route path="/Brandslider" element={<BrandSlider/>} />
         <Route path="/Blog" element={<Blog />} />
         
